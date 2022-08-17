@@ -1,5 +1,10 @@
 @import "variables";
+@import "scrollbar";
+@import "header";
+@import "navbar";
 @import "loader";
+@import "base";
+@import "mobile";
 
 // :root {
 //     //
@@ -7,8 +12,20 @@
 
 html,
 body {
-    font-family: $defaultFont;
+    font-family: var(--blog-font-family), sans-serif !important;
     background-color: $background;
     color: $text-color;
     scroll-behavior: smooth;
+}
+
+::selection {
+    background: darken($primary, 33%);
+    color: white;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: darken($primary, 33%);
+    color: white;
+    /* Gecko Browsers */
 }

@@ -1,5 +1,6 @@
 {
     "baseUrl": "https://blog.kurtlourens.com/",
+    "refId": "kurtsBlog",
     "owner": {
         "name": "Kurt Lourens",
         "email": "mailto:hi@kurtlourens.com",
@@ -13,7 +14,9 @@
         "colour": "#7986cb",
         "maskColour": "#7986cb",
         "appleStatusBar": "#7986cb",
-        "googleFont": "https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap"
+        "coverImg": "/assets/img/cover.jpg",
+        "googleFont": "https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap",
+        "fontFamily": "Poppins"
     },
     "meta": {
         "title": "Inside My Mind",
@@ -35,6 +38,9 @@
         "creator": "Kurt Lourens",
         "imageAlt": "Logo of AssistantNMS",
         "imageUrl": "https://nmsassistant.com/assets/img/twitterCard.png"
+    },
+    "analytics": {
+        "googleAnalyticsTag": ""
     },
     "socials": [
         {

@@ -9,10 +9,11 @@
     "data:generateProjectData": "node engine/node/getGeneratedProjectJson.js",
     "sass": "npm-run-all --sequential sass:*",
     "sass:site": "sass ./scss/site.scss ./public/assets/css/site.css",
+    "template": "npm-run-all --sequential template:*",
     "template:pages": "node engine/node/buildPages.js",
     "template:posts": "node engine/node/buildPosts.js",
     "template:misc": "node engine/node/buildMiscFiles.js",
-    "template:minifyGeneratedFiles": "node engine/node/minifyPublicFiles.js",
+    "prePublish:minifyGeneratedFiles": "node engine/node/minifyPublicFiles.js",
     "watch:template": "nodemon -e hbs -x \"npm run template:main\"",
     "watch:sass": "nodemon -e scss -x \"npm run sass\""
   },

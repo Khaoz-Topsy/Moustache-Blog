@@ -12,7 +12,7 @@ async function buildMisc() {
     const projectDataContents = await readFile('./data/generated/_project.json', 'utf8');
     const projectData = JSON.parse(projectDataContents);
 
-    setup.buildCollectionOfHbsFiles(miscDir, projectData);
+    setup.buildCollectionOfHbsFiles(miscDir, projectData, '');
 
     // for (const redirect of projectData.redirects) {
     //     if (!fs.existsSync(redirect.pattern)) {

@@ -1,2 +1,11 @@
 /node_modules/*
 /data/generated
+/public/htaccess
+/public/humans.txt
+/public/index.html
+/public/manifest.json
+/public/opensearch.xml
+/public/redirect.html
+/public/serviceWorker.js
+/public/sitemap.xml
+/public/web.config

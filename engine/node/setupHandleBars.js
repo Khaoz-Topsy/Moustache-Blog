@@ -4,7 +4,12 @@ const Handlebars = require('handlebars');
 const readFile = util.promisify(fs.readFile);
 
 async function setupHandlebars() {
+
+    const siteMetaContents = await readFile('./data/_siteMeta.json', 'utf8');
+    let siteData = JSON.parse(siteMetaContents);
+
     process.env['NODE_ENV'] = require('../../package.json').version;
+    process.env['CUSTOM_REFID'] = siteData.refId ?? 'khaozBlog';
 
     forEachFileInDir(
         './engine/helpers', '.helper.js',
@@ -30,7 +35,7 @@ async function forEachFileInDir(dir, extensionToRemove, perFileFunc) {
     }
 }
 
-async function buildCollectionOfHbsFiles(directory, projectData) {
+async function buildCollectionOfHbsFiles(directory, projectData, replaceExtensionWith) {
     const allTemplates = fs.readdirSync(directory, { withFileTypes: true });
     for (const dirent of allTemplates) {
         if (dirent.isDirectory()) continue;
@@ -39,7 +44,7 @@ async function buildCollectionOfHbsFiles(directory, projectData) {
         const fullFileName = dirent.name;
         if (fullFileName.substring(fullFileName.length - 4, fullFileName.length) != '.hbs') continue;
 
-        const fileName = fullFileName.replace('.hbs', '.html');
+        const fileName = fullFileName.replace('.hbs', replaceExtensionWith);
 
         const templateFilePath = `${directory}/${fullFileName}`;
         const fileDest = `./public/${fileName}`;

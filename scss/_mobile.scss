@@ -1,0 +1,17 @@
+.hidden-in-desktop {
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+}
+
+.hidden-in-mobile {
+    @media screen and (max-width: 1000px) {
+        display: none !important;
+    }
+}
+
+.inner {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+}

@@ -1,0 +1,37 @@
+img,
+br,
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.max-1-line {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+.drop-shadow {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.drop-shadow-inv {
+    filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.5));
+}

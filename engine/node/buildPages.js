@@ -12,7 +12,7 @@ async function buildPages() {
     const projectDataContents = await readFile('./data/generated/_project.json', 'utf8');
     const projectData = JSON.parse(projectDataContents);
 
-    setup.buildCollectionOfHbsFiles(pagesDir, projectData);
+    setup.buildCollectionOfHbsFiles(pagesDir, projectData, '.html');
 }
 
 buildPages()
