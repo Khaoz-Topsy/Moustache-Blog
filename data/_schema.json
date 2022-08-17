@@ -1,0 +1,19 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}

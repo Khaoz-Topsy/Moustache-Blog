@@ -1,0 +1,41 @@
+{
+  "name": "kurt-lourens-blog-templ",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm-run-all --sequential data:* sass:* template:*",
+    "dev": "node ./engine/node/devServer.js",
+    "data": "npm-run-all --sequential data:*",
+    "data:generateLiveJson": "node engine/node/generateLiveJson.js",
+    "data:generateProjectData": "node engine/node/getGeneratedProjectJson.js",
+    "sass": "npm-run-all --sequential sass:*",
+    "sass:site": "sass ./scss/site.scss ./public/assets/css/site.css",
+    "template:pages": "node engine/node/buildPages.js",
+    "template:posts": "node engine/node/buildPosts.js",
+    "template:misc": "node engine/node/buildMiscFiles.js",
+    "template:minifyGeneratedFiles": "node engine/node/minifyPublicFiles.js",
+    "watch:template": "nodemon -e hbs -x \"npm run template:main\"",
+    "watch:sass": "nodemon -e scss -x \"npm run sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khaoz-Topsy/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Khaoz-Topsy/blog/issues"
+  },
+  "homepage": "https://blog.kurtlourens.com",
+  "author": "Kurt Lourens",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "live-server": "1.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "minify": "^7.2.2",
+    "move-file": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4"
+  }
+}

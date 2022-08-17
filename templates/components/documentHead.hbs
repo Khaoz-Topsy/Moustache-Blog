@@ -1,0 +1,89 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="{{meta.appName}}">
+    <title>{{#if documentTitle}}{{documentTitle}} - {{/if}}{{meta.title}}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{images.faviconIcon}}">
+    {{#each images.favicon}}
+    <link rel="icon" type="{{this.type}}" sizes="{{this.size}}" href="{{this.href}}">
+    {{/each}}
+
+    <link rel="index" href="{{baseUrl}}">
+    <link rel="canonical" href="{{baseUrl}}">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="manifest.json">
+    <link rel="author" href="humans.txt">
+    <link rel="me" href="{{owner.email}}">
+    <link rel="me" href="{{owner.website}}" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="{{theme.colour}}">
+    <meta name="subject" content="{{meta.description}}">
+    <meta name="description" content="{{meta.description}}">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    {{#each images.apple}}
+    <link rel="apple-touch-icon" type="{{this.type}}" sizes="{{this.size}}" href="{{this.href}}">
+    {{/each}}
+    <link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="{{theme.appleStatusBar}}">
+
+    <!-- Twitter -->
+    {{#if twitterCard}}
+    <meta name="twitter:card" content="{{twitterCard.metaImageSize}}">
+    <meta name="twitter:site" content="{{twitterCard.handle}}">
+    <meta name="twitter:creator" content="{{twitterCard.creator}}">
+    <meta name="twitter:url" content="{{baseUrl}}">
+    <meta name="twitter:title" content="{{meta.appName}}">
+    <meta name="twitter:description" content="{{meta.description}}">
+    <meta name="twitter:image" content="{{twitterCard.imageUrl}}">
+    <meta name="twitter:image:alt" content="{{twitterCard.imageAlt}}">
+    {{/if}}
+
+    <!-- Facebook -->
+    {{#if facebookCard}}
+    <meta property="og:url" content="{{baseUrl}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{meta.title}}">
+    <meta property="og:image" content="{{facebookCard.imageUrl}}">
+    <meta property="og:image:alt" content="{{facebookCard.imageAlt}}">
+    <meta property="og:description" content="{{meta.description}}">
+    <meta property="og:site_name" content="{{meta.title}}">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="{{facebookCard.creator}}">
+    {{/if}}
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    {{#if images.loading}}
+    <link rel="preload" as="image" href="{{images.loading}}">
+    {{/if}}
+
+    {{#each preconnectLinks}}
+    <link rel="preconnect" href="{{this}}">
+    {{/each}}
+
+    {{#if meta.googleFont}}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap" rel="stylesheet">
+    {{/if}}
+
+    <link rel="stylesheet" href="/assets/css/site.css?v={{version}}">
+
+    {{!-- JSON-LD --}}
+    <script nonce="schema" type="application/ld+json">{{{jsonSchema}}}</script>
+</head>

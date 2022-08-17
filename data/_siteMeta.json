@@ -1,0 +1,112 @@
+{
+    "baseUrl": "https://blog.kurtlourens.com/",
+    "owner": {
+        "name": "Kurt Lourens",
+        "email": "mailto:hi@kurtlourens.com",
+        "website": "https://kurtlourens.com",
+        "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
+        "title": "Senior Software Engineer",
+        "nickname": "KhaozTopsy",
+        "twitter": "@KhaozTopsy"
+    },
+    "theme": {
+        "colour": "#7986cb",
+        "maskColour": "#7986cb",
+        "appleStatusBar": "#7986cb",
+        "googleFont": "https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap"
+    },
+    "meta": {
+        "title": "Inside My Mind",
+        "appName": "Inside My Mind - Kurt Lourens",
+        "description": "This is where I write about my Dev experiences, and anything else I think is worth reading 😁",
+        "mailto": "mailto:hi@kurtlourens.com",
+        "privacyPolicy": "/privacy_policy.html",
+        "termsAndConditions": "/terms_and_conditions.html"
+    },
+    "twitterCard": {
+        "handle": "@AssistantNMS",
+        "creator": "@KhaozTopsy",
+        "imageAlt": "Logo of AssistantNMS",
+        "metaImageSize": "summary_large_image",
+        "imageUrl": "https://nmsassistant.com/assets/img/twitterCard.png"
+    },
+    "facebookCard": {
+        "locale": "en_UK",
+        "creator": "Kurt Lourens",
+        "imageAlt": "Logo of AssistantNMS",
+        "imageUrl": "https://nmsassistant.com/assets/img/twitterCard.png"
+    },
+    "socials": [
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/AssistantNMS",
+            "imgUrl": "/assets/img/companies/twitter.png"
+        },
+        {
+            "name": "Discord Server",
+            "url": "https://assistantapps.com/discord",
+            "imgUrl": "/assets/img/companies/discord.svg"
+        },
+        {
+            "name": "Github organisation",
+            "url": "https://github.com/AssistantNMS",
+            "imgUrl": "/assets/img/companies/github.png"
+        },
+        {
+            "name": "Facebook page",
+            "url": "https://www.facebook.com/AssistantNMS",
+            "imgUrl": "/assets/img/companies/facebook.svg"
+        },
+        {
+            "name": "Steam Community group",
+            "url": "https://steamcommunity.com/groups/AssistantNMS",
+            "imgUrl": "/assets/img/companies/steam.png"
+        },
+        {
+            "name": "Send an email",
+            "url": "mailto:support@nmsassistant.com",
+            "imgUrl": "/assets/img/companies/email.png"
+        }
+    ],
+    "preconnectLinks": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://cdnjs.cloudflare.com"
+    ],
+    "redirects": [
+        {
+            "pattern": "discord",
+            "url": "https://discord.gg/q3aFBQM"
+        },
+        {
+            "pattern": "discordbot",
+            "url": "https://discord.com/api/oauth2/authorize?client_id=640818571164778496&permissions=2147762240&scope=bot%20applications.commands"
+        },
+        {
+            "pattern": "github",
+            "url": "https://github.com/AssistantNms"
+        },
+        {
+            "pattern": "kurt",
+            "url": "https://kurtlourens.com"
+        }
+    ],
+    "headers": [
+        {
+            "name": "Set-Cookie",
+            "value": "cross-site-cookie=name; SameSite=None; Secure"
+        },
+        {
+            "name": "X-Clacks-Overhead",
+            "value": "GNU Eddison the Magic Doggo"
+        },
+        {
+            "name": "Clacks-Overhead",
+            "value": "GNU Eddison the Magic Doggo"
+        },
+        {
+            "name": "X-Powered-by",
+            "value": "Magic &amp; the Distraction Squad"
+        }
+    ]
+}

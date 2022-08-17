@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <httpProtocol>
+            <customHeaders>
+                {{#each headers}}
+                <add name="{{name}}" value="{{{value}}}" />
+                {{/each}}
+            </customHeaders>
+        </httpProtocol>
+        <rewrite>
+            <rules>
+                <rule name="Redirect to https" enabled="true" patternSyntax="Wildcard" stopProcessing="true">
+                    <match url="*" />
+                    <conditions logicalGrouping="MatchAny">
+                        <!-- <add input="{HTTP_HOST}" pattern="^nmsassistant\.com$" negate="true" /> -->
+                        <add input="{HTTPS}" pattern="off" />
+                    </conditions>
+                    <action type="Redirect" url="https://nmsassistant.com/{R:1}" redirectType="Found" />
+                </rule>
+
+                {{#each redirects}}
+                <rule name="RedirectTo{{pattern}}" stopProcessing="true">
+                    <match url="^(.*){{pattern}}(.*)" ignoreCase="true" />
+                    <action type="Redirect" url="{{{urlrefescaped url}}}" appendQueryString="false"
+                        redirectType="Permanent" />
+                </rule>
+                {{/each}}
+            </rules>
+        </rewrite>
+        <httpErrors>
+            <remove statusCode="500" subStatusCode="-1" />
+            <remove statusCode="404" subStatusCode="-1" />
+            <error statusCode="404" prefixLanguageFilePath="" path="/404.html" responseMode="ExecuteURL" />
+            <error statusCode="500" prefixLanguageFilePath="" path="/404.html" responseMode="ExecuteURL" />
+        </httpErrors>
+    </system.webServer>
+</configuration>

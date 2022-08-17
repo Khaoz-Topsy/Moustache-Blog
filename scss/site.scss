@@ -1,0 +1,14 @@
+@import "variables";
+@import "loader";
+
+// :root {
+//     //
+// }
+
+html,
+body {
+    font-family: $defaultFont;
+    background-color: $background;
+    color: $text-color;
+    scroll-behavior: smooth;
+}
