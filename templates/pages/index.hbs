@@ -8,7 +8,15 @@
     {{> components/header}}
 
     <div class="page-wrapper">
+        <div class="inner">
+            <div class="post-feed">
 
+                {{#each posts}}
+                {{> components/postCard}}
+                {{/each}}
+
+            </div>
+        </div>
     </div>
     {{> components/fullPageLoader}}
 </body>

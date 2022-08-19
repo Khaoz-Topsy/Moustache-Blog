@@ -1,6 +1,6 @@
-One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that Durandal's Github repository has not received significant updates in several years and has even been archived. 
+One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that [Durandal's Github](https://github.com/BlueSpire/Durandal/) repository has not received significant updates in several years and has even been archived. 
 
-![https://github.com/BlueSpire/Durandal/](./images/durandalGit.png)
+![https://github.com/BlueSpire/Durandal/]({postDir}/durandalGit.png)
 
 This presents the dev team with quite a few issues;
 
@@ -24,7 +24,7 @@ Our solution?
 
 ## React and WebComponents! 🎉
 
-![So what does it mean? I am glad you asked!](./images/alrightSooo.gif)
+![So what does it mean? I am glad you asked!]({postDir}/alrightSooo.gif)
 
 React is a super popular User Interface Component library (yes not a framework) developed by Facebook and is used by millions of developers world wide. It also has a majority share of the front-end Javascript library market. So this is a modern tool that has a lot of developer support and documentation. It should also be around for quite a while, since it's not a Google product (Oooh feel the burn Google!). There are also a lot of people using React which means that there are a lot of potential developers that will keep it alive if the React team abandons the project. 
 
@@ -36,11 +36,11 @@ Custom components created by either React, Angular, Vue, etc are only really usa
 
 ### The downsides
 
-This isn't a perfect solution unfortunately. It is an uncommon way to make use of React and we have found some situations where we needed to use the React Life Cycle hooks in a suboptimal way. The props that are passed down to the React components are serialised, therefore we cannot pass functions to the React components. The performance of rendering multiple individual React components on the page, each with their own virtual DOM is probably not fantastic, although we have not seen a significant decrease.
+This isn't a perfect solution unfortunately. It is an uncommon way to make use of React and we have found some situations where we needed to use the [React Life Cycle](https://reactjs.org/docs/state-and-lifecycle.html) hooks in a suboptimal way. The props that are passed down to the React components are serialised, therefore we cannot pass functions to the React components. The performance of rendering multiple individual React components on the page, each with their own virtual DOM is probably not fantastic, although we have not seen a significant decrease.
 
 This approach is not used by very few developers (if any, I have not come across anyone else that has taken this approach), so we are still on our own when it comes to fixing framework bugs. The package we depend on to wrap the React components as WebComponents is old and not used very often. 
 
-![web-react-components npm](./images/Screenshot-2021-04-19-104302.jpg)
+![web-react-components npm]({postDir}/Screenshot-2021-04-19-104302.jpg)
 
 However, the more the webapp becomes "Reactified" the more all of these issues are resolve and some will even resolve themselves. We can use the React Life Cycles better when not accommodating the way Durandal binds data, the performance will improve as less React components are rendered individually rendered on the page as separate apps and finally we can move away from (directly) depending on outdated packages
 

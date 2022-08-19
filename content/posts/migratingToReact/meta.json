@@ -1,8 +1,8 @@
 {
     "url": "migrating-to-react-from-durandal",
     "title": "Migrating to React from Durandal, slowly",
-    "description": "A good enough solution to a difficult problem",
-    "imageUrl": "",
+    "excerpt": "One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that Durandal's Github repository has not received significant updates in several years and has even been archived. ",
+    "imageUrl": "cover.png",
     "publishDate": "2021-06-28",
     "isFeatured": false,
     "tags": [
