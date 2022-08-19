@@ -29,6 +29,7 @@
   color: #fff;
   background: #090a0b no-repeat 50%;
   background-size: cover;
+  z-index: 1;
 }
 .site-header:after, .site-header:before {
   content: "";
@@ -44,13 +45,9 @@
   background: rgba(0, 0, 0, 0.18);
 }
 .site-header .site-header-content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 5vw 4vw 7vw;
   min-height: 200px;
@@ -85,11 +82,43 @@
   left: 0;
   width: 100vw;
   display: flex;
-  background: rgba(0, 0, 0, 0.2);
+  background: #2c2c2c;
 }
-.navbar .nav-bar-logo {
-  max-width: 3em;
-  max-height: 3em;
+.navbar.post {
+  padding-top: 4px;
+  transform: translateY(-5em);
+  transition: transform 500ms ease-in-out;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.navbar.post.show {
+  transform: translateY(0);
+}
+.navbar.post .progress-wrapper {
+  width: 102%;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+.navbar.post .progress-wrapper .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  background-color: #80cbc4;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.navbar .navbar-brand .navbar-item {
+  padding: 0;
+}
+.navbar .navbar-brand .navbar-item img {
+  max-height: 56px;
+}
+.navbar .navbar-menu .navbar-start .navbar-item:first {
+  padding-left: 0.5em;
+}
+.navbar .navbar-item,
+.navbar .navbar-link {
+  color: white;
 }
 
 .opacity80 {
@@ -121,6 +150,120 @@
 .full-page-loader img {
   width: 150px;
   margin: 0 auto;
+}
+
+.post-feed {
+  position: relative;
+  flex-wrap: wrap;
+  margin-top: -70px;
+  padding-top: 0;
+  z-index: 2;
+}
+.post-feed .post-card {
+  display: flex;
+  height: 300px;
+  border-radius: 1em;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+.post-feed .post-card .post-card-image-link {
+  flex: 2;
+  margin-right: 1em;
+  background-repeat: no-repeat;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  overflow: hidden;
+}
+.post-feed .post-card .post-card-image-link img {
+  width: 101%;
+  height: 101%;
+  object-fit: cover;
+}
+.post-feed .post-card .post-card-content {
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.5em 1em 0.5em;
+  overflow: hidden;
+}
+.post-feed .post-card .post-card-content small {
+  color: lightslategrey;
+  text-transform: uppercase;
+}
+.post-feed .post-card .post-card-content h2 {
+  font-size: 1.4em;
+  line-height: 1em;
+  font-weight: 500;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.post-feed .post-card .post-card-content p {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+.post-feed .post-card .post-card-excerpt {
+  flex-grow: 1;
+}
+
+.post-wrapper {
+  padding-top: 5em;
+  margin-bottom: 10em !important;
+}
+.post-wrapper .meta {
+  display: block;
+  color: #80cbc4;
+  text-align: center;
+}
+.post-wrapper h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.post-wrapper .content {
+  border-radius: 1em;
+  background-color: white;
+  overflow: hidden;
+}
+.post-wrapper .content .cover {
+  height: 20em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+.post-wrapper .content .markdown-content {
+  padding: 2em 3em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: rgb(25, 25, 25);
+}
+.post-wrapper .content .markdown-content h1,
+.post-wrapper .content .markdown-content h2,
+.post-wrapper .content .markdown-content h3,
+.post-wrapper .content .markdown-content h4,
+.post-wrapper .content .markdown-content h5,
+.post-wrapper .content .markdown-content h6 {
+  color: rgb(25, 25, 25);
+}
+.post-wrapper .content .markdown-content p {
+  margin-bottom: 1.5em;
+}
+.post-wrapper .content .markdown-content img {
+  display: block;
+  margin: 0 auto 0.5em auto;
+}
+.post-wrapper .content .markdown-content code {
+  padding: 0 5px 2px;
+  font-size: 0.8em;
+  line-height: 1em;
+  font-weight: 400 !important;
+  background: #e5eff5;
+  color: black;
+  border-radius: 3px;
 }
 
 img,
@@ -182,7 +325,7 @@ br,
 html,
 body {
   font-family: var(--blog-font-family), sans-serif !important;
-  background-color: #2b2f4b;
+  background-color: #282828;
   color: #d0d0d0;
   scroll-behavior: smooth;
 }

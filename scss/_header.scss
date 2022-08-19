@@ -5,6 +5,7 @@
     color: #fff;
     background: #090a0b no-repeat 50%;
     background-size: cover;
+    z-index: 1;
 
     &:after,
     &:before {
@@ -22,13 +23,9 @@
     }
 
     .site-header-content {
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-direction: column;
         flex-direction: column;
-        -ms-flex-pack: center;
         justify-content: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 5vw 4vw 7vw;
         min-height: 200px;

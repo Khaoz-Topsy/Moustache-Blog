@@ -1,0 +1,130 @@
+.post-feed {
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: -70px;
+    padding-top: 0;
+    z-index: 2;
+
+    .post-card {
+        display: flex;
+        height: 300px;
+        border-radius: 1em;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+
+        .post-card-image-link {
+            flex: 2;
+            margin-right: 1em;
+            background-repeat: no-repeat;
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+            overflow: hidden;
+
+            img {
+                width: 101%;
+                height: 101%;
+                object-fit: cover;
+            }
+        }
+
+        .post-card-content {
+            flex: 1;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1em 1.5em 1em 0.5em;
+            overflow: hidden;
+
+            small {
+                color: lightslategrey;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 1.4em;
+                line-height: 1em;
+                font-weight: 500;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                overflow: hidden;
+                display: block;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .post-card-excerpt {
+            flex-grow: 1;
+        }
+    }
+}
+
+.post-wrapper {
+    padding-top: 5em;
+    margin-bottom: 10em !important;
+
+    .meta {
+        display: block;
+        color: $secondary;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .content {
+        border-radius: 1em;
+        background-color: white;
+        overflow: hidden;
+
+        .cover {
+            height: 20em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            overflow: hidden;
+        }
+
+        .markdown-content {
+            padding: 2em 3em;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: rgb(25, 25, 25);
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: rgb(25, 25, 25);
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto 0.5em auto;
+            }
+
+            code {
+                padding: 0 5px 2px;
+                font-size: 0.8em;
+                line-height: 1em;
+                font-weight: 400 !important;
+                background: #e5eff5;
+                color: black;
+                border-radius: 3px;
+            }
+        }
+    }
+}
