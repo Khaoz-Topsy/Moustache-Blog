@@ -2,8 +2,10 @@ const fs = require('fs');
 const util = require('util');
 const Handlebars = require('handlebars');
 const readFile = util.promisify(fs.readFile);
+const copyFile = util.promisify(fs.copyFile);
 
 const setup = require('./setupHandleBars');
+const customUtil = require('./util');
 
 async function buildPosts() {
     setup.setupHandlebars();
@@ -17,7 +19,9 @@ async function buildPosts() {
     const postFolders = fs.readdirSync(postsFolderPath, { withFileTypes: true });
     const postDirs = postFolders.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
     for (const dir of postDirs) {
-        const metaFilePath = `${postsFolderPath}/${dir}/meta.json`;
+        const fullDir = `${postsFolderPath}/${dir}`;
+        const metaFilePath = `${fullDir}/meta.json`;
+        const contentFilePath = `${fullDir}/content.md`;
         if (fs.existsSync(metaFilePath) == false) {
             console.log(`Post folder '${dir}' does not contain a meta.json file`);
             continue;
@@ -26,7 +30,11 @@ async function buildPosts() {
         const metaJsonFileContents = await readFile(metaFilePath, 'utf8');
         const metaJsonObj = JSON.parse(metaJsonFileContents);
 
-        const fileDestFolder = `./public/${metaJsonObj.url}`;
+        const content = await readFile(contentFilePath, "utf8");
+        const htmlContent = await customUtil.convertMarkdownToHtml(content);
+
+        const fileDestFolderRel = `/posts/${metaJsonObj.url}`;
+        const fileDestFolder = `./public${fileDestFolderRel}`;
         const fileDest = `${fileDestFolder}/index.html`;
 
         if (!fs.existsSync(fileDestFolder)) {
@@ -40,7 +48,16 @@ async function buildPosts() {
             post: { ...metaJsonObj },
         };
         const compiledTemplate = templateFunc(templateFullData);
-        fs.writeFile(fileDest, compiledTemplate, ['utf8'], () => { });
+        const templWithContent = compiledTemplate.replace('<slot />', htmlContent);
+        const templWithImagesFixed = templWithContent.replaceAll('%7BpostDir%7D', fileDestFolderRel);
+        fs.writeFile(fileDest, templWithImagesFixed, ['utf8'], () => { });
+
+        const assetsDir = `${fullDir}/assets`;
+        const assets = fs.readdirSync(assetsDir);
+        for (const assetFile of assets) {
+            await copyFile(`${assetsDir}/${assetFile}`, `${fileDestFolder}/${assetFile}`);
+        }
+        await copyFile(`${fullDir}/${metaJsonObj.imageUrl}`, `${fileDestFolder}/${metaJsonObj.imageUrl}`);
     }
 }
 
