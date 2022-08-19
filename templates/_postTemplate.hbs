@@ -4,11 +4,22 @@
 {{> components/documentHead}}
 
 <body id="blog-body" class="is-loading">
-    {{> components/fullPageLoader}}
+    {{> components/postNavbar }}
 
-    <div class="page-wrapper">
+    <div class="post-wrapper inner">
+        <b class="meta">{{post.dateFormatted}} / {{#each post.tags}}{{#if @first}}{{this}}{{/if}}{{/each}}</b>
+        <h1>{{post.title}}</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/{{post.url}}/{{post.imageUrl}})"></div>
+            <div class="markdown-content">
+                <slot />
+            </div>
+        </div>
 
     </div>
+
+    {{> components/fullPageLoader}}
 </body>
 
 {{> components/scripts isPostPage="true"}}
