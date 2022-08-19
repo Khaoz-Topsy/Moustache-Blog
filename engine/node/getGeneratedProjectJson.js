@@ -107,7 +107,7 @@ async function readPostJsonFiles(siteData) {
         });
     }
 
-    posts.sort((a, b) => new Date(a.publishDate) - new Date(b.publishDate));
+    posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 
     return {
         ...siteData,

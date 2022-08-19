@@ -1,18 +1,19 @@
 $progress-bar-height: 4px;
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     display: flex;
     background: #2c2c2c;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 
     &.post {
+        position: fixed;
         padding-top: $progress-bar-height;
         transform: translateY(-5em);
         transition: transform 500ms ease-in-out;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 
         &.show {
             transform: translateY(0);

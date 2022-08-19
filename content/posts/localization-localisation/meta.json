@@ -1,14 +1,15 @@
 {
     "url": "localization-localisation",
     "title": "Localization / Localisation - Part 1",
-    "excerpt": "I have been streaming the development of the Assistant for No Man's Sky for a while now, over on my Twitch channel which, you can find here. Please leave a follow if you enjoy this post 💪.",
+    "excerpt": "Localisation is one of the parts of designing software that can be very difficult and can be extremely costly when overlooked. As with most...",
     "imageUrl": "cover.png",
     "publishDate": "2021-01-7",
     "isFeatured": false,
     "tags": [
-        "Getting Started",
+        "Localisation",
+        "Non-Technical",
         "Side Project",
-        "WebApi"
+        "Management"
     ],
     "author": "Kurt Lourens",
     "meta": {

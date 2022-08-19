@@ -1,51 +1,35 @@
-I have been streaming the development of the [Assistant for No Man's Sky](https://nmsassistant.com/) for a while now, over on my Twitch channel which, you can find [here](https://twitch.tv/khaoztopsy). Please leave a follow if you enjoy this post 💪. 
-This all started with me wanting some way for stream chat to be able to interact with my stream a bit more, while looking for some solutions I didn't really find something I liked... So I decided to build something myself!
+Localisation is one of the parts of designing software that can be very difficult and can be extremely costly when overlooked.
 
-So what was I actually building? A way for users to be able to select an emoji and then to have that emoji float across the screen in a random way. Sound simple right? Well there are a few things to consider. 
+As with most topics, on the surface they seem trivial until you delve deeper into the subject and learn the nuances. Over a year ago when I started the [Assistant for No Man's Sky](https://nmsassistant.com/) project I had a very basic understanding of how localisation worked and I was very lucky to start my project on the right foot by having localisation/internationalisation working from the start of the project. A year later I have now had a lot more experience with supporting multiple languages in an app that is used around the world and I thought that I would share what I have learned.
 
-1. The emoji needs to display as soon as a person clicks an emoji. 
-1. How to integrate with Streaming software.
-1. Who is allowed to click the emojis? If anyone can then we might be vulnerable to attacks.
+## The basic idea
 
-## Showing emojis instantly
-For the first point, while it is easy to receive a request from a user on the server and then respond with information. It is a lot more tricky to send information directly to a user without them having asked for it. One hacky way to get around this is to have a client make many requests to the server, perhaps once a second, that way the client would get a delay of 1 second maximum before receiving the information from the server. This obviously has a really bad downside which is that so many requests are wasted.
+Often the simplest approach to localisation is to make use of a Dictionary/Map of strings for each language that your app supports. In simpler terms this would be a `key` that is used by your application's code that is associated with a `value`, which is the text that is displayed to the user in your application. In the image below the `keys` are represented in the light blue colour and the `values` are in orange.
 
-![Traditional way of getting information from a server]({postDir}/traditional-2.png)
+![An example of a localisation file from the Assistant for No Man's Sky]({postDir}/Screenshot-2020-12-07-131138.jpg)
 
-A better solution would be to use some technology called SignalR. This allows for real time 2 way communication between the client and server.
+One part of writing code that makes use of localisation is the added effort of adding text to this file each and every time you add text to your application. Even though this can be a nuisance (especially if adding an entry is not automated) but it is a lot better for your application in the long run.
 
-![With SignalR any machine can send data to the other after the initial setup is complete]({postDir}/signalR-1.png)
+## Hacking things together with Magic Strings
 
-## Integrating with the live stream
+In the beginning of many projects, the aim is to get something that is "working" out as soon as possible. For web applications this might take the form of getting the page routing working so that developers and testers can navigate the site and start working on the various pages. More often than not, this also means using text without adding it to the localisation files or not even adding localisation files.
 
-I am using Streamlabs OBS to stream and integrating with it generally means having a website/webpage dedicated to displaying what will be displayed on the stream. By default the background colour is set to transparent on the browser source. In my case I created a webpage to display the selected emojis, but the menu and footer were still displaying. I added a class to all the elements I didn't want to display `.hide-on-stream` and then on the browser source I added a CSS rule to `display: none` for elements with that class.
+What often happens in projects early on is that we end up using Magic Strings. For non technical readers, this is simply regular text that does not change and is added to source code. Often these Magic Strings are copy pasted into various parts of the code instead of being placed in one central file which would make it easier to edit the value and have the change occur everywhere in the application. 
 
-![Adding a webpage as a source in StreamLabs OBS]({postDir}/Screenshot-2021-03-24-142723.jpg)
+An example of when using hard-coded/Magic Strings caused havoc happened in April 2018, when the percentage of VAT charged in South Africa was changed from 14% to 15%. This value had not been changed for 25 years and as expected there were quite a few reports of software development teams that worked on or maintained codebases containing hard-coded/Magic Strings of the VAT rate. You may be thinking that it would be easy to search for all instances of `14` within the code and replace them with `15`. While that may work for a lot of scenarios, there are also places where the VAT value was added, multiplied, divided, etc into other values which resulted in different values being stored in Magic Strings as well as various other parts of the software containing `14` for values not related to VAT.
 
-## Who is allowed to submit emojis?
+## Avoiding Magic Strings
 
-This was quite tricky problem...
+With localisation it is better to abstain from using Magic Strings for any words used in the application as much as possible. The effort of coming back to and combing through code looking for Magic Strings is far higher than adding the new text to your localisations.
 
-![First run without spam protection]({postDir}/EwODcHWW8AE8chV.jpg)
+Another area to avoid adding Magic Strings, is the keys of the localisation file. If your application is using Magic Strings to load the translations, it becomes difficult to know whether or not the key actually exists in your localisation files. It is much better to list all available localisation keys and ensure that developers get appropriate error messages when there is a change to the available localisation keys, otherwise your app may end up not being able to load translations for part of it's User Interface and ultimately giving your users a bad experience.
 
-Very tricky...
+## Localisation in Games
+A lot of what I have mentioned so far applies to Video Games as well. An example of a game that has been translated into many languages is **No Man's Sky**. I have had the opportunity to look into the game's files through data mining and here is an example of one of the language files in the game `NMS_LOC6_ENGLISH.MBIN`.
 
-![What an auto clicker can accomplish when there is no spam protection]({postDir}/EwOGKCAXMAY6WNh.jpg)
+![NMS_LOC6_ENGLISH.MBIN decompiled]({postDir}/Screenshot-2021-01-04-170304.jpg)
 
-Eventually I got around to implementing rate limiting on the endpoints, for the dotnet Core WebApi it is really easy to add thanks to the [AspNetCoreRateLimit NuGet package](https://github.com/stefanprodan/AspNetCoreRateLimit). I chose to limit the endpoint to 2 requests per second, per IP Address as well as a limit of 10 requests per 30 seconds per IP Address. Then on the front end I added some messages to let the user know that they are being rate limited and we also limit their ability to spam the same emoji multiple times. 
+While this looks more complicated than the previous image, after dissecting the image a bit you will see it just takes more characters to represent the same thing. On line 6 you will notice `value="UI_PSN_SAVE_TRANSFER_UP`, this represents the `key` in the Dictionary/Map and the `value="Transfer Save Data to PlayStation®5"` represents the `value` for the English translation. _It is important to note that this is a decompiled version of the game's language files and most likely is not what the game developers actually work with. I hope that whatever they are using, it is not only easier to read but also easier to maintain._
 
-One thing I still need to handle is if there are many users (or many IP Addresses) submitting many emojis. These would all be valid and would not be prevented by the rate limits. But that hasn't happened yet, I don't have a large enough audience for this to be an issue 😅. One solution I have thought of is to allow some emojis on screen (maybe the first submitted emojis) and then to display totals of the emojis submitted at the bottom of the screen. 
-
-## Adding some flair 🎉
-One thing I wanted to add was a little bit of randomness on every emoji, what I settled on was having multiple "Major" animations, these would be the animations that move the emoji across the screen and then adding several "Minor" animations that would effect the emoji in a smaller way. Each of these animations will also have variations. 
-
-![Diagram of some of the animations]({postDir}/anims-2.png)
-
-There are currently 5 different "Major" animations, Snowflake, Fly, Fly-inverse, DVD, DVD-inverse. These "Major" animations have multiple different variations, in the case of the Snowflake animation, the variation affects the X coordinate where the variations for the Fly animations affect the Y coordinates. There are also 3 different timings for the "Major" animations, 10, 20 and 30 seconds. Each emoji displayed on the dashboard will get one "Major" animation and one "Minor" animation. The "Minor" animation applied will either be Shake, Rotate, Bounce-x, Pulse or Bounce-y. Each "Minor" animation also gets a random timing, either 1, 2, 3 or 4 seconds.
-
-I also made use of the [Gamblers Dice library](https://www.npmjs.com/package/gamblers-dice) for all random selections, mostly because I really like how this library tries to combat our human understanding of randomness and the Gamblers Fallacy. I found the Gamblers Fallacy really interesting, checkout the Wikipedia article [here](https://simple.wikipedia.org/wiki/Gambler%27s_fallacy). Basically this package will help ensure that each of the animations will appear the same amount of times, slightly better than the usual way of getting a random value. 
-
-### In Conclusion
-This tool is still a work in progress, you can view the site live over here: [stream.assistantapps.com](https://stream.assistantapps.com/). If you want to mess around with it, ensure that you have the ["client"](https://stream.assistantapps.com/) open to submit emojis and the ["dashboard"](https://stream.assistantapps.com/dash) open to see the emojis bounce around the screen.
-
-_I may split this out into it's own solution one day... That way it would be available for other people to use 🤷‍♂️_
+Localisation is an essential part of your software for a global audience and can be difficult to add once a software solution has been worked on for a considerable amount of time. I have seen the value of adding support for multiple languages through the apps I have built, either via the reviews left by users or the number of users in different countries. I definitely think that you should add it to your applications as soon as possible!
+In the next post I will look at the UI Considerations, Translator pain points, etc... See you there 💪
