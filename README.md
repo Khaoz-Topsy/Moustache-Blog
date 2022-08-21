@@ -4,7 +4,7 @@ I am so sick and tired of keeping my Ghost blog up to date, it is suppossed to t
 
 <div align="center">
 
-    ![Yes I am aware](./.github/img/standards.png)
+![Yes I am aware](./.github/img/standards.png)
 
 </div>
 
