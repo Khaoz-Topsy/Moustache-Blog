@@ -272,7 +272,7 @@
   overflow: hidden;
 }
 .post-wrapper .content .markdown-content {
-  padding: 2em 3em;
+  padding: 2em 3em 5em 3em;
   font-size: 1.5em;
   font-weight: 500;
   color: rgb(25, 25, 25);

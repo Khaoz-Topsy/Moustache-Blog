@@ -1,0 +1,31 @@
+{
+    "url": "assistantnms-incident-1",
+    "title": "AssistantNMS Incident 2020-03-31",
+    "excerpt": "Recently I have been adding documentation to the Assistant for No Man's Sky API. While I was adding some 'useful' comments and explanations I was also tightening up it's security...",
+    "imageUrl": "cover.png",
+    "publishDate": "2020-03-31",
+    "isFeatured": false,
+    "tags": [
+        "Management",
+        "NMS",
+        "Side Project",
+        "Android",
+        "iOS",
+        "WebApi"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": "",
+        "description": ""
+    },
+    "twitter": {
+        "title": "",
+        "description": "",
+        "imageUrl": ""
+    },
+    "facebook": {
+        "title": "",
+        "description": "",
+        "imageUrl": ""
+    }
+}

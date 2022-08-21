@@ -1,0 +1,30 @@
+{
+    "url": "static-site-generation-the-hard-way",
+    "title": "Static Site generation the hard way",
+    "excerpt": "How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man's Sky website",
+    "imageUrl": "cover.png",
+    "publishDate": "2020-04-16",
+    "isFeatured": false,
+    "tags": [
+        "Performance",
+        "Getting Started",
+        "NMS",
+        "CI",
+        "CD"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": "",
+        "description": ""
+    },
+    "twitter": {
+        "title": "",
+        "description": "",
+        "imageUrl": ""
+    },
+    "facebook": {
+        "title": "",
+        "description": "",
+        "imageUrl": ""
+    }
+}
