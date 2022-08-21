@@ -122,6 +122,11 @@
   color: white;
 }
 
+.navbar-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .opacity80 {
   background-color: #303030;
   opacity: 0.8;
@@ -165,15 +170,16 @@
 .post-feed .post-card {
   display: flex;
   height: 300px;
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
   border-radius: 1em;
   background-color: white;
   color: black;
   text-decoration: none;
   transition: transform 250ms ease-in-out;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .post-feed .post-card:hover {
-  transform: scale(102%);
+  transform: scale(105%);
 }
 .post-feed .post-card .post-card-image-link {
   flex: 2;
@@ -217,14 +223,14 @@
 }
 .post-feed .post-card:nth-of-type(3n + 2), .post-feed .post-card:nth-of-type(3n + 3) {
   height: 400px;
-  width: calc(50% - 0.5em);
+  width: calc(50% - 1rem);
   flex-direction: column;
 }
 .post-feed .post-card:nth-of-type(3n + 2) .post-card-image-link, .post-feed .post-card:nth-of-type(3n + 3) .post-card-image-link {
   flex: 1;
   margin-right: 0;
-  border-top-left-radius: 0.9em;
-  border-top-right-radius: 0.9em;
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
   border-bottom-left-radius: 0;
 }
 .post-feed .post-card:nth-of-type(3n + 2) .post-card-content, .post-feed .post-card:nth-of-type(3n + 3) .post-card-content {
@@ -232,10 +238,10 @@
   padding-left: 1em;
 }
 .post-feed .post-card:nth-of-type(3n + 2) {
-  margin-right: 0.5em;
+  margin-right: 1rem;
 }
 .post-feed .post-card:nth-of-type(3n + 3) {
-  margin-left: 0.5em;
+  margin-left: 1rem;
 }
 
 .post-wrapper {
@@ -276,7 +282,8 @@
 .post-wrapper .content .markdown-content h3,
 .post-wrapper .content .markdown-content h4,
 .post-wrapper .content .markdown-content h5,
-.post-wrapper .content .markdown-content h6 {
+.post-wrapper .content .markdown-content h6,
+.post-wrapper .content .markdown-content strong {
   color: rgb(25, 25, 25);
 }
 .post-wrapper .content .markdown-content p {
@@ -294,6 +301,9 @@
   background: #e5eff5;
   color: black;
   border-radius: 3px;
+}
+.post-wrapper .content .markdown-content blockquote {
+  background-color: #f5f5f5;
 }
 
 img,

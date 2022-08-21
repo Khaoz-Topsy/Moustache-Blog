@@ -55,6 +55,7 @@ async function readJsonFilesInDir(relativeDir, currentSiteData) {
     const allJsonFiles = fs.readdirSync(relativeDir, { withFileTypes: true });
     for (const dirent of allJsonFiles) {
         if (dirent.isDirectory()) continue;
+        if (dirent.name[0] == ".") continue;
         if (dirent.name[0] == "_") continue;
 
         const fullFileName = dirent.name;

@@ -10,15 +10,16 @@
     .post-card {
         display: flex;
         height: 300px;
-        margin-bottom: 1em;
+        margin-bottom: 2rem;
         border-radius: 1em;
         background-color: white;
         color: black;
         text-decoration: none;
         transition: transform 250ms ease-in-out;
+        box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 50%);
 
         &:hover {
-            transform: scale(102%);
+            transform: scale(105%);
         }
 
         .post-card-image-link {
@@ -71,14 +72,14 @@
         &:nth-of-type(3n + 2),
         &:nth-of-type(3n + 3) {
             height: 400px;
-            width: calc(50% - 0.5em);
+            width: calc(50% - 1rem);
             flex-direction: column;
 
             .post-card-image-link {
                 flex: 1;
                 margin-right: 0;
-                border-top-left-radius: 0.9em;
-                border-top-right-radius: 0.9em;
+                border-top-left-radius: 0.75em;
+                border-top-right-radius: 0.75em;
                 border-bottom-left-radius: 0;
             }
 
@@ -89,11 +90,11 @@
         }
 
         &:nth-of-type(3n + 2) {
-            margin-right: 0.5em;
+            margin-right: 1rem;
         }
 
         &:nth-of-type(3n + 3) {
-            margin-left: 0.5em;
+            margin-left: 1rem;
         }
     }
 }
@@ -139,7 +140,8 @@
             h3,
             h4,
             h5,
-            h6 {
+            h6,
+            strong {
                 color: rgb(25, 25, 25);
             }
 
@@ -160,6 +162,10 @@
                 background: #e5eff5;
                 color: black;
                 border-radius: 3px;
+            }
+
+            blockquote {
+                background-color: #f5f5f5;
             }
         }
     }

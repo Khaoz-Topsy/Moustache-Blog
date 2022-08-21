@@ -23,6 +23,7 @@ $progress-bar-height: 4px;
             width: 102%;
             margin-left: -1%;
             margin-right: -1%;
+
             .progress {
                 position: absolute;
                 left: 0;
@@ -55,4 +56,9 @@ $progress-bar-height: 4px;
     .navbar-link {
         color: white;
     }
+}
+
+.navbar-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
