@@ -3,9 +3,9 @@
   <ShortName>Inside My Mind</ShortName>
   <Description>This is where I write about my Dev experiences, and anything else I think is worth reading 😁</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://blog.kurtlourens.com//favicon.ico</Image>
-  <Url type="text/html" template="https://blog.kurtlourens.com/?q={searchTerms}">
+  <Image width="16" height="16" type="image/x-icon">https://temp.kurtlourens.com//favicon.ico</Image>
+  <Url type="text/html" template="https://temp.kurtlourens.com/?q={searchTerms}">
     <Param name="searchTerms" value="{searchTerms}" />
   </Url>
-  <Url type="application/x-suggestions+json" template="https://blog.kurtlourens.com/?q={searchTerms}" />
+  <Url type="application/x-suggestions+json" template="https://temp.kurtlourens.com/?q={searchTerms}" />
 </OpenSearchDescription>
