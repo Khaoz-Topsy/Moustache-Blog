@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+{{> components/documentHead documentTitle="Page Builder"}}
+
+<body id="blog-body" class="is-loading">
+
+    <div class="builder-wrapper">
+        <div class="inner">
+            <div id="editor-tab-content" class="tab-content">
+                <textarea id="builder-textarea"></textarea>
+            </div>
+
+        </div>
+    </div>
+
+    {{> components/fullPageLoader}}
+</body>
+
+{{> components/scripts includeHighlighJs="true" isBuilder="true"}}
+
+</html>

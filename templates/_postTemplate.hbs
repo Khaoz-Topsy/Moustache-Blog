@@ -7,7 +7,8 @@
     {{> components/postNavbar }}
 
     <div class="post-wrapper inner">
-        <b class="meta">{{post.dateFormatted}} / {{#each post.tags}}{{#if @first}}{{this}}{{/if}}{{/each}}</b>
+        <b class="meta">{{post.dateFormatted}}{{#each post.tags}}{{#if
+            @first}}&nbsp;&nbsp;/&nbsp;&nbsp;{{this}}{{/if}}{{/each}}</b>
         <h1>{{post.title}}</h1>
 
         <div class="content">
@@ -22,6 +23,6 @@
     {{> components/fullPageLoader}}
 </body>
 
-{{> components/scripts isPostPage="true"}}
+{{> components/scripts includeHighlighJs="true"}}
 
 </html>

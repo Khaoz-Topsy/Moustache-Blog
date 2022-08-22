@@ -158,6 +158,49 @@
   margin: 0 auto;
 }
 
+.builder-wrapper #editor-tab-content {
+  margin-top: 5vh;
+}
+.builder-wrapper #editor-tab-content .CodeMirror {
+  background-color: #22272e;
+  color: whitesmoke;
+  border-radius: 0 0 0.5em 0.5em;
+  border: 1px solid rgba(187, 187, 187, 0.6);
+}
+.builder-wrapper #editor-tab-content .CodeMirror .CodeMirror-vscrollbar {
+  overflow: visible !important;
+}
+.builder-wrapper #editor-tab-content .CodeMirror .CodeMirror-scroll {
+  height: 80vh;
+  width: 100% !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  caret-color: whitesmoke;
+  overflow-x: hidden !important;
+}
+.builder-wrapper #editor-tab-content .CodeMirror .CodeMirror-cursor {
+  border-left: 1px solid whitesmoke;
+}
+.builder-wrapper #editor-tab-content .editor-toolbar,
+.builder-wrapper #editor-tab-content .editor-toolbar.fullscreen {
+  background-color: transparent !important;
+}
+.builder-wrapper #editor-tab-content .editor-toolbar::before,
+.builder-wrapper #editor-tab-content .editor-toolbar.fullscreen::before {
+  width: 0;
+}
+.builder-wrapper #editor-tab-content .editor-toolbar a,
+.builder-wrapper #editor-tab-content .editor-toolbar.fullscreen a {
+  color: white !important;
+  background-color: #2c3e50 !important;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.builder-wrapper #editor-tab-content .editor-toolbar a:nth-child(1),
+.builder-wrapper #editor-tab-content .editor-toolbar.fullscreen a:nth-child(1) {
+  margin-left: 0;
+}
+
 .post-feed {
   display: flex;
   flex-wrap: wrap;
@@ -271,29 +314,33 @@
   background-position: 50% 50%;
   overflow: hidden;
 }
-.post-wrapper .content .markdown-content {
+.post-wrapper .content > .markdown-content {
   padding: 2em 3em 5em 3em;
+}
+
+.content > .markdown-content {
+  padding: 1em 1em 5em 1em;
   font-size: 1.5em;
   font-weight: 500;
   color: rgb(25, 25, 25);
 }
-.post-wrapper .content .markdown-content h1,
-.post-wrapper .content .markdown-content h2,
-.post-wrapper .content .markdown-content h3,
-.post-wrapper .content .markdown-content h4,
-.post-wrapper .content .markdown-content h5,
-.post-wrapper .content .markdown-content h6,
-.post-wrapper .content .markdown-content strong {
+.content > .markdown-content h1,
+.content > .markdown-content h2,
+.content > .markdown-content h3,
+.content > .markdown-content h4,
+.content > .markdown-content h5,
+.content > .markdown-content h6,
+.content > .markdown-content strong {
   color: rgb(25, 25, 25);
 }
-.post-wrapper .content .markdown-content p {
+.content > .markdown-content p {
   margin-bottom: 1.5em;
 }
-.post-wrapper .content .markdown-content img {
+.content > .markdown-content img {
   display: block;
   margin: 0 auto 0.5em auto;
 }
-.post-wrapper .content .markdown-content code {
+.content > .markdown-content code {
   padding: 0 5px 2px;
   font-size: 0.8em;
   line-height: 1em;
@@ -302,8 +349,11 @@
   color: black;
   border-radius: 3px;
 }
-.post-wrapper .content .markdown-content blockquote {
+.content > .markdown-content blockquote {
   background-color: #f5f5f5;
+}
+.content > .markdown-content blockquote p {
+  margin-bottom: 0;
 }
 
 img,
