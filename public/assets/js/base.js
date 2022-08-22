@@ -7,4 +7,4 @@ function customOnLoad() {
 setTimeout(() => {
     customOnLoad?.();
     hljs?.highlightAll?.()
-}, 1000);
+}, 250);
