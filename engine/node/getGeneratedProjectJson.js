@@ -44,7 +44,6 @@ async function generateFullJson() {
         ]
     };
 
-    console.log(`Writing compiled _project.json`);
     fs.writeFile(`./data/generated/_project.json`, JSON.stringify(siteDataFull), ['utf8'], () => { });
     console.log(`Successfully compiled _project.json`);
 }
@@ -61,7 +60,7 @@ async function readJsonFilesInDir(relativeDir, currentSiteData) {
         const fullFileName = dirent.name;
         const fileName = fullFileName.replace('.json', '');
 
-        console.log(`Reading ${fullFileName} file`);
+        console.log(`\tReading ${fullFileName} file`);
         const jsonFileContents = await readFile(`${relativeDir}/${fullFileName}`, 'utf8');
         let jsonObj = JSON.parse(jsonFileContents);
         result = {
@@ -80,10 +79,10 @@ async function readPostJsonFiles(siteData) {
     const postFolders = fs.readdirSync(postsFolderPath, { withFileTypes: true });
     const postDirs = postFolders.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
     for (const dir of postDirs) {
-        console.log(`Reading ${dir} post`);
+        console.log(`\tReading ${dir} post`);
         const metaFilePath = `${postsFolderPath}/${dir}/meta.json`;
         if (fs.existsSync(metaFilePath) == false) {
-            console.log(`Post folder '${dir}' does not contain a meta.json file`);
+            console.log(`\tPost folder '${dir}' does not contain a meta.json file`);
             continue;
         }
 

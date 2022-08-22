@@ -45,7 +45,11 @@ async function buildPosts() {
         const templateFunc = Handlebars.compile(template);
         const templateFullData = {
             ...projectData,
-            post: { ...metaJsonObj },
+            documentTitle: metaJsonObj.title,
+            post: {
+                ...metaJsonObj,
+                dateFormatted: customUtil.postDateFormat(metaJsonObj.publishDate),
+            },
         };
         const compiledTemplate = templateFunc(templateFullData);
         const templWithContent = compiledTemplate.replace('<slot />', htmlContent);
@@ -53,11 +57,15 @@ async function buildPosts() {
         fs.writeFile(fileDest, templWithImagesFixed, ['utf8'], () => { });
 
         const assetsDir = `${fullDir}/assets`;
-        const assets = fs.readdirSync(assetsDir);
-        for (const assetFile of assets) {
-            await copyFile(`${assetsDir}/${assetFile}`, `${fileDestFolder}/${assetFile}`);
+        if (fs.existsSync(assetsDir)) {
+            const assets = fs.readdirSync(assetsDir);
+            for (const assetFile of assets) {
+                // if (fs.existsSync(assetFile)) {
+                //     fs.de
+                // }
+                await copyFile(`${assetsDir}/${assetFile}`, `${fileDestFolder}/${assetFile}`);
+            }
         }
-        await copyFile(`${fullDir}/${metaJsonObj.imageUrl}`, `${fileDestFolder}/${metaJsonObj.imageUrl}`);
     }
 }
 
