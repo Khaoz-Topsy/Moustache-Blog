@@ -1,5 +1,4 @@
 .opacity80 {
-    background-color: #303030;
     opacity: 0.8;
 }
 
@@ -15,6 +14,7 @@
     justify-content: center;
     text-align: center;
     z-index: 1003;
+    background-color: #303030;
     color: white;
     transition: opacity 500ms ease-in-out;
     pointer-events: none;

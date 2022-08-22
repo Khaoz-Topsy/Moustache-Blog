@@ -28,6 +28,10 @@ br,
     max-width: 500px;
 }
 
+.upper-case {
+    text-transform: uppercase;
+}
+
 .drop-shadow {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }

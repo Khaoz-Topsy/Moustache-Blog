@@ -7,8 +7,11 @@
     {{> components/postNavbar }}
 
     <div class="post-wrapper inner">
-        <b class="meta">{{post.dateFormatted}}{{#each post.tags}}{{#if
-            @first}}&nbsp;&nbsp;/&nbsp;&nbsp;{{this}}{{/if}}{{/each}}</b>
+        <b class="meta">
+            <span class="upper-case">{{post.dateFormatted}}
+                {{#each post.tags}}{{#if @first}}&nbsp;&nbsp;/&nbsp;&nbsp;{{this}}{{/if}}{{/each}}
+            </span>
+        </b>
         <h1>{{post.title}}</h1>
 
         <div class="content">
