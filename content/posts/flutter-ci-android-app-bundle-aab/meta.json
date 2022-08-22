@@ -1,14 +1,13 @@
 {
-    "url": "static-site-generation-the-hard-way",
-    "title": "Static Site generation the hard way",
-    "excerpt": "How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man's Sky website",
+    "url": "flutter-ci-android-app-bundle-aab",
+    "title": "Flutter CI Android App Bundle 📦",
+    "excerpt": "How to create an Android App Bundle aab file with Azure DevOps Continuous Integration extensions / tasks. I made an Azure DevOps extension that lets you...",
     "imageUrl": "cover.png",
-    "publishDate": "2020-04-16",
+    "publishDate": "2019-08-7",
     "isFeatured": false,
     "tags": [
-        "Performance",
-        "Getting Started",
-        "NMS",
+        "Flutter",
+        "Android",
         "CI",
         "CD"
     ],

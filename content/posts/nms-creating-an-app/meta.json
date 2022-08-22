@@ -1,0 +1,32 @@
+{
+    "url": "nms-creating-an-app",
+    "title": "Creating an App for No Man's Sky",
+    "excerpt": "How I created the Assistant for No Man's Sky App. Accidentally released it, and have been working on making it better ever since",
+    "imageUrl": "cover.jpg",
+    "publishDate": "2019-11-26",
+    "isFeatured": false,
+    "tags": [
+        "Flutter",
+        "NMS",
+        "Android",
+        "iOS",
+        "Side Project",
+        "CI",
+        "CD"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": "How I created the Assistant for No Man's Sky App. Accidentally released it, and have been working on making it better ever since"
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}

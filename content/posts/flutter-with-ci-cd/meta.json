@@ -1,14 +1,13 @@
 {
-    "url": "static-site-generation-the-hard-way",
-    "title": "Static Site generation the hard way",
-    "excerpt": "How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man's Sky website",
+    "url": "flutter-with-ci-cd",
+    "title": "Flutter with CI / CD",
+    "excerpt": "Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used.",
     "imageUrl": "cover.png",
-    "publishDate": "2020-04-16",
+    "publishDate": "2019-04-07",
     "isFeatured": false,
     "tags": [
-        "Performance",
-        "Getting Started",
-        "NMS",
+        "Flutter",
+        "Android",
         "CI",
         "CD"
     ],

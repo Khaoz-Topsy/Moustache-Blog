@@ -1,16 +1,13 @@
 {
-    "url": "static-site-generation-the-hard-way",
-    "title": "Static Site generation the hard way",
-    "excerpt": "How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man's Sky website",
+    "url": "flutter-pub-upgrade",
+    "title": "Flutter pub upgrade Issue [SOLVED]",
+    "excerpt": "How I encountered and solved a Flutter pub upgrade issue when trying to use Flutter Desktop on the master channel of Flutter",
     "imageUrl": "cover.png",
-    "publishDate": "2020-04-16",
+    "publishDate": "2019-06-04",
     "isFeatured": false,
     "tags": [
-        "Performance",
-        "Getting Started",
-        "NMS",
-        "CI",
-        "CD"
+        "Flutter",
+        "Android"
     ],
     "author": "Kurt Lourens",
     "meta": {

@@ -15,17 +15,17 @@
     ],
     "author": "Kurt Lourens",
     "meta": {
-        "title": "",
-        "description": ""
+        "title": null,
+        "description": null
     },
     "twitter": {
-        "title": "",
-        "description": "",
-        "imageUrl": ""
+        "title": null,
+        "description": null,
+        "imageUrl": null
     },
     "facebook": {
-        "title": "",
-        "description": "",
-        "imageUrl": ""
+        "title": null,
+        "description": null,
+        "imageUrl": null
     }
 }

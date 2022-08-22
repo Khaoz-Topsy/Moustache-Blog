@@ -4,7 +4,7 @@ This is by no means the best way to accomplish what I set out to do, but it does
 I want the home page for the Assistant for No Man's Sky to be a static page. I want as few API calls and functionality on the website as possible. At the time of writing the home page is an Angular app with quite a few pages of tools and admin functions, with most pages belonging to modules that are lazy loaded. Well this has worked; it has started making issues with out of sync Javascript modules coming from ServiceWorker caching as well as Cloudflare caching. Also, the page's purpose has strayed from being a promotional site to a bulky tool.
 
 ## Common solutions
-**Static Site generator:** There are many many static site generators, although after setting up a few of them I was not impressed with the resulting asset sizes.
+**Static Site generator:** There are many many static site generators, although after setting up a few of them I was not impressed with the resulting asset sizes.\
 **Server Side Rendered:** I know C# MVC and Razor quite well, so this would have been an easier option to use.
 
 ## ASP.Net MVC solution

@@ -1,0 +1,29 @@
+{
+    "url": "intro-to-flutter",
+    "title": "Intro to Flutter",
+    "excerpt": "Flutter is a relatively recent addition to cross-platform mobile app development frameworks. It is a Google product, open source, and has a very strong and growing community. If you’re not too familiar with Flutter, the below will cover how it works, and the pros and cons of using it.",
+    "imageUrl": "cover.jpg",
+    "publishDate": "2020-03-25",
+    "isFeatured": false,
+    "tags": [
+        "Flutter",
+        "Getting Started",
+        "Android",
+        "iOS"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}
