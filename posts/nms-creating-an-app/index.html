@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Creating an App for No Man&#x27;s Sky - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Creating an App for No Man&#x27;s Sky
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">26 November 2019
+                &nbsp;&nbsp;/&nbsp;&nbsp;Flutter
+            </span>
+        </b>
+        <h1>Creating an App for No Man&#x27;s Sky</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/nms-creating-an-app/cover.jpg)"></div>
+            <div class="markdown-content">
+                <p>I created the Assistant for No Man's Sky App.</p>
+<blockquote>
+<p>I have done 2 presentations to the company I work for, one in-front of around 10 people that I prepared for and the other in-front of the whole company around 500 that I was not prepared for 😅. So I am pretty good at talking about my first successful App, hopefully I am good at writing about it too.</p>
+</blockquote>
+<p>For about 10 days I had no internet at home, VumaTel had decided that even though I had been a paying customer for over 2 and a half years, they would not give me the internet I was paying for. They also never reimbursed me for the down time which they admitted fault to. During the down time I could only play games that were installed and No Man's Sky was one of them. It had been a long time since I had played and the updates brought new items with them, so I didn't remember/know all the recipes. Since I had internet on my phone I tried using the Gamepedia wiki, but their mobile support was terrible. So I looked in the Google Play Store for an App. Found only 1 and it had a &quot;donate to unlock all the features that are actually useful&quot; mechanic. So I decided to create my own App.</p>
+<h2>Planning</h2>
+<p>My idea was simple, and so the App would be simple as well. I wanted to display a list of all the items, have the ability to search and on clicking an item see more details about that item as well as the crafting recipe. I decided that I would develop the App in Flutter so that I could one day release to iOS without rebuilding the whole App. I also decided to use the Wiki to get all the in game info for each item.</p>
+<h2>Proof of Concept</h2>
+<p>I had only used Flutter once before and so was quite new to the Framework. It took me a week or two of only working in the evenings to get a proof of concept. A lot of the time was also spent on getting the actual game data. In the beginning I was scraping the Gamepedia wiki. I would later realise how out of date the wiki was. After getting to a point where I was happy I asked the No Man's Sky community if they thought it would be useful on <a href="https://www.reddit.com/r/NoMansSkyTheGame/">https://www.reddit.com/r/NoMansSkyTheGame/</a>. Pretty much asking if I should release the App to the public.</p>
+<p><img src="communityQ.png" alt="Asking Reddit if they want an app"></p>
+<p>I got a few responses. Not as many people said that they wanted the App, and quite a few pointed out that there was already an App that only required a donation.</p>
+<h2>Releasing the App to the world</h2>
+<p>I decided that I would release the App and see what feedback I would get. I started looking at a service offered by <a href="https://blog.kurtlourens.com/p/976daefe-2e4b-415c-9fbd-9ab39f201f1a/codemagic.io">CodeMagic.io</a>, to build and release my App automatically. It is a very easy to use platform with some great features. I have been using it ever since. Their developers have also responded to all of my issues and fixed bugs on their side very quickly. While I was learning their user interface and setting everything up, I accidentally released a production version to the Google Play Store 😅.</p>
+<p><img src="oops.gif" alt="Oops"></p>
+<p>I contacted Google Support asking them to 'undo' my release but it was too late 😂, the App was live and publicly available. I did get a response from Google Play Support 2 weeks later, saying that there was nothing they can do 😂. At least they responded.</p>
+<h2>Continued Dev and Support</h2>
+<p>Once the App was released (12 August 2019) I was kind of responsible for it. I felt that it was my responsibility to look after what I had created and make sure that it was the best that it could be. Unlike my other side projects that were never released and therefore never used, I had users and they wanted a great App.</p>
+<p><img src="release2.png" alt="New users acquired in the first few days"></p>
+<p>I adopted a weekly release schedule, on Thursday nights I prepare release notes for the next day, which I post to Reddit to let everyone know what the latest update contains. I have progressively moved the release time of the Reddit post to 8PM GMT, as this meant that my largest audience, the USA, would be able to see the Reddit post at a reasonable time and I would not have to stay up past midnight. 8PM GMT is lunch time in the West and 3PM in the East of the USA.</p>
+<h2>Wrapping up</h2>
+<p>I wanted to create this post long ago, but did not manage to find the time 😅. I plan on writing a few more, each focusing on something different such as the Coding, Community Management, App Stores, etc.</p>
+<p>I hope that you enjoyed the post, please feel free to get in contact with me via email or join the Discord server 😁</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes&amp;ref=blog.kurtlourens.com">Google Play Store</a></p>
+<p><a href="https://apps.apple.com/us/app/id1480287625?ref=blog.kurtlourens.com">Apple App Store</a></p>
+<p><a href="https://nmsassistant.com/?ref=blog.kurtlourens.com">Main Website</a></p>
+<p><a href="https://discord.gg/q3aFBQM?ref=nmsAssistant">Discord Server</a></p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

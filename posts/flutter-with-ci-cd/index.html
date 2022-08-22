@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Flutter with CI / CD - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Flutter with CI / CD
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">7 April 2019
+                &nbsp;&nbsp;/&nbsp;&nbsp;Flutter
+            </span>
+        </b>
+        <h1>Flutter with CI / CD</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/flutter-with-ci-cd/cover.png)"></div>
+            <div class="markdown-content">
+                <p>Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used. It didn't take me too long to get the hang of Dart (the language used to write Flutter apps), and turns out that Flutter is blazing fast ⚡ (at least from what I have seen).</p>
+<p><a href="https://visualstudio.com"><img src="https://khaoznet.visualstudio.com/KhaozNet/_apis/build/status/KhaozNet.FlutterCV%20-%20CI" alt="Build status"></a> <a href="https://visualstudio.com"><img src="https://khaoznet.vsrm.visualstudio.com/_apis/public/Release/badge/b5441643-fd7c-4330-92d7-bffc23a7e0a4/18/25" alt="Production Deployment status"></a></p>
+<p>One thing that I found was lacking for Flutter Developers was Microsoft's AppCenter support. For all the other ways that I could think of for writing Android or iOS apps, AppCenter had an easy way to setup a CI (Continuous Integration) and CD (Continuous Deployment) pipeline. While not having a CI / CD pipeline setup isn't the worst thing, especially if you are a team of one. I still did not want to build the APK on my machine and then upload it to the Google Play Console each time I wanted to release a new version.</p>
+<p>Thankfully someone had already written a Azure Devops Marketplace extension to build Flutter apps on Azure Devops' agents.
+<a href="https://marketplace.visualstudio.com/items?itemName=aloisdeniel.flutter">https://marketplace.visualstudio.com/items?itemName=aloisdeniel.flutter</a></p>
+<p>So at the end of my first Flutter app's journey I had a pipeline where if I committed and pushed code on the develop branch of my repository my app would be built and deployed to the Google Play Store's Internal test track, where myself and anyone else specified could download the app and test it. And if I committed and pushed code to master, the production version of the app would be pushed to the Google Play Store as a publicly available app to download.</p>
+<p>In the process of building the app I got familiar with Azure Devops' Secure File storage. I used the Secure File storage to hold my app's keystore, Google-Services.json and environment settings.</p>
+<ul>
+<li>The keystore file is what signs you Android app and your app is required to be signed for every upload to the Google Play Store.</li>
+<li>The Google-Services.json is a file which has Authentication information for Google's Cloud Services. I am using their Cloud Messaging service to be able to send push notification's to my app's users.</li>
+<li>The environment settings file contains settings that the app requires which are different on my local machine versus the production version of the app. In this case I used this file to hold my AppCenter AppSecret, which is used for Analytics.</li>
+</ul>
+<p>I believe that it is important to automate as much as possible, especially if you are doing a repetitive task. Automation can save a lot of time, as one of my friends once said...</p>
+<p><em>Friends don't let friends deploy manually.</em></p>
+<p><strong>Update:</strong> here is the <a href="http://kurtlourens.com/docs/flutterBuild.yaml" target="_blank" rel="noopener norefferer">flutterBuild.yaml</a> file requested by Cobalt</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

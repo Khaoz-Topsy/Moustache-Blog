@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Stream Emojis - Build it yourself 🛠 - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Stream Emojis - Build it yourself 🛠
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">25 March 2021
+                &nbsp;&nbsp;/&nbsp;&nbsp;Getting Started
+            </span>
+        </b>
+        <h1>Stream Emojis - Build it yourself 🛠</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/stream-emojis-build-it-yourself/cover.png)"></div>
+            <div class="markdown-content">
+                <p>I have been streaming the development of the <a href="https://nmsassistant.com/">Assistant for No Man's Sky</a> for a while now, over on my Twitch channel which, you can find <a href="https://twitch.tv/khaoztopsy">here</a>. Please leave a follow if you enjoy this post 💪.
+This all started with me wanting some way for stream chat to be able to interact with my stream a bit more, while looking for some solutions I didn't really find something I liked... So I decided to build something myself!</p>
+<p>So what was I actually building? A way for users to be able to select an emoji and then to have that emoji float across the screen in a random way. Sound simple right? Well there are a few things to consider.</p>
+<ol>
+<li>The emoji needs to display as soon as a person clicks an emoji.</li>
+<li>How to integrate with Streaming software.</li>
+<li>Who is allowed to click the emojis? If anyone can then we might be vulnerable to attacks.</li>
+</ol>
+<h2>Showing emojis instantly</h2>
+<p>For the first point, while it is easy to receive a request from a user on the server and then respond with information. It is a lot more tricky to send information directly to a user without them having asked for it. One hacky way to get around this is to have a client make many requests to the server, perhaps once a second, that way the client would get a delay of 1 second maximum before receiving the information from the server. This obviously has a really bad downside which is that so many requests are wasted.</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/traditional-2.png" alt="Traditional way of getting information from a server"></p>
+<p>A better solution would be to use some technology called SignalR. This allows for real time 2 way communication between the client and server.</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/signalR-1.png" alt="With SignalR any machine can send data to the other after the initial setup is complete"></p>
+<h2>Integrating with the live stream</h2>
+<p>I am using Streamlabs OBS to stream and integrating with it generally means having a website/webpage dedicated to displaying what will be displayed on the stream. By default the background colour is set to transparent on the browser source. In my case I created a webpage to display the selected emojis, but the menu and footer were still displaying. I added a class to all the elements I didn't want to display <code>.hide-on-stream</code> and then on the browser source I added a CSS rule to <code>display: none</code> for elements with that class.</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/Screenshot-2021-03-24-142723.jpg" alt="Adding a webpage as a source in StreamLabs OBS"></p>
+<h2>Who is allowed to submit emojis?</h2>
+<p>This was quite tricky problem...</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/EwODcHWW8AE8chV.jpg" alt="First run without spam protection"></p>
+<p>Very tricky...</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/EwOGKCAXMAY6WNh.jpg" alt="What an auto clicker can accomplish when there is no spam protection"></p>
+<p>Eventually I got around to implementing rate limiting on the endpoints, for the dotnet Core WebApi it is really easy to add thanks to the <a href="https://github.com/stefanprodan/AspNetCoreRateLimit">AspNetCoreRateLimit NuGet package</a>. I chose to limit the endpoint to 2 requests per second, per IP Address as well as a limit of 10 requests per 30 seconds per IP Address. Then on the front end I added some messages to let the user know that they are being rate limited and we also limit their ability to spam the same emoji multiple times.</p>
+<p>One thing I still need to handle is if there are many users (or many IP Addresses) submitting many emojis. These would all be valid and would not be prevented by the rate limits. But that hasn't happened yet, I don't have a large enough audience for this to be an issue 😅. One solution I have thought of is to allow some emojis on screen (maybe the first submitted emojis) and then to display totals of the emojis submitted at the bottom of the screen.</p>
+<h2>Adding some flair 🎉</h2>
+<p>One thing I wanted to add was a little bit of randomness on every emoji, what I settled on was having multiple &quot;Major&quot; animations, these would be the animations that move the emoji across the screen and then adding several &quot;Minor&quot; animations that would effect the emoji in a smaller way. Each of these animations will also have variations.</p>
+<p><img src="/posts/stream-emojis-build-it-yourself/anims-2.png" alt="Diagram of some of the animations"></p>
+<p>There are currently 5 different &quot;Major&quot; animations, Snowflake, Fly, Fly-inverse, DVD, DVD-inverse. These &quot;Major&quot; animations have multiple different variations, in the case of the Snowflake animation, the variation affects the X coordinate where the variations for the Fly animations affect the Y coordinates. There are also 3 different timings for the &quot;Major&quot; animations, 10, 20 and 30 seconds. Each emoji displayed on the dashboard will get one &quot;Major&quot; animation and one &quot;Minor&quot; animation. The &quot;Minor&quot; animation applied will either be Shake, Rotate, Bounce-x, Pulse or Bounce-y. Each &quot;Minor&quot; animation also gets a random timing, either 1, 2, 3 or 4 seconds.</p>
+<p>I also made use of the <a href="https://www.npmjs.com/package/gamblers-dice">Gamblers Dice library</a> for all random selections, mostly because I really like how this library tries to combat our human understanding of randomness and the Gamblers Fallacy. I found the Gamblers Fallacy really interesting, checkout the Wikipedia article <a href="https://simple.wikipedia.org/wiki/Gambler%27s_fallacy">here</a>. Basically this package will help ensure that each of the animations will appear the same amount of times, slightly better than the usual way of getting a random value.</p>
+<h3>In Conclusion</h3>
+<p>This tool is still a work in progress, you can view the site live over here: <a href="https://stream.assistantapps.com/">stream.assistantapps.com</a>. If you want to mess around with it, ensure that you have the <a href="https://stream.assistantapps.com/">&quot;client&quot;</a> open to submit emojis and the <a href="https://stream.assistantapps.com/dash">&quot;dashboard&quot;</a> open to see the emojis bounce around the screen.</p>
+<p><em>I may split this out into it's own solution one day... That way it would be available for other people to use 🤷‍♂️</em></p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

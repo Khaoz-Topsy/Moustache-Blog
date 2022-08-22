@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Intro to Flutter - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Intro to Flutter
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">25 March 2020
+                &nbsp;&nbsp;/&nbsp;&nbsp;Flutter
+            </span>
+        </b>
+        <h1>Intro to Flutter</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/intro-to-flutter/cover.jpg)"></div>
+            <div class="markdown-content">
+                <blockquote>
+<p>I wrote this article on the internal blog platform for the company I work for Entelect. The article was chosen to be displayed on their website <a href="https://culture.entelect.co.za/our-engineering/introduction-to-flutter/">culture.entelect.co.za</a>. Before publishing it, Entelect did have people read over and correct my grammer, spelling, etc as well as design an awesome graphic for it 😁</p>
+</blockquote>
+<p>Flutter is a relatively recent addition to cross-platform mobile app development frameworks. It is a Google product, open source, and has a very strong and growing community. If you’re not too familiar with Flutter, the below will cover how it works, and the pros and cons of using it.</p>
+<p>Due to its relatively short existence, it changes often and sometimes drastically. An example of this is the recent Flutter for Web and Flutter Desktop Embedding that have become available. This makes Flutter exciting to try out, but also risky. Since Flutter is a Google product it is also vulnerable to being ended sooner than its users would like. The <a href="https://gcemetery.co/">Google Cemetery</a> has a long list of products that Google has ended.</p>
+<h2>The basic idea</h2>
+<p>Flutter Apps are written in Dart (another Google product). Dart is a C-like language that is relatively new, and is receiving a lot of the features that other languages have had for decades, such as the recent <a href="https://www.youtube.com/watch?v=D3j0OSfT9ZI">extension methods</a> addition.</p>
+<p>The Dart code in Flutter Apps are <a href="https://en.wikipedia.org/wiki/Ahead-of-time_compilation">Ahead-of-Time compiled</a> in release mode and <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation">Just-in-Time compiled</a> when in debug mode – which leads to a better development experience and better speed in production.</p>
+<p>Flutter App’s views are similar to that of React. Instead of <em>components</em>, Dart calls it <em>widgets</em>. React has components and functional components, and Dart has stateful and stateless widgets. The Dart code interacts with the Flutter Engine, telling it how and what to draw on screen, and the Flutter Engine communicates with the platform it is running on. Therefore the Flutter Engine is a sort of Virtual Machine.</p>
+<p>If your Dart code works on the Flutter Engine, it will also work on any platform that can run the Flutter Engine. This strategy is what lead to Flutter for Web and Flutter Desktop Embedding materialise in such a short period.</p>
+<h2>Some Caveats</h2>
+<p>You may be thinking that you will only need to write Dart code and the Flutter framework handles the rest. However, the ecosystem is not 100% there yet.</p>
+<p>In a lot of situations the app developer will need to change something that is platform-specific (i.e. changing the app Icon.) For Android, changing an app icon involves working with its resources folder and the manifest file, but for Desktop it involves changing a .ico file.</p>
+<p>You would also still need to deal with the app stores. Each app store has their own set of requirements and rules that they expect developers to follow. And Apple is by far the most expensive and most strict.</p>
+<h2>Features</h2>
+<p>Flutter’s developer environment is all about speed. The hot reloading means that your changes are reflected within a second or two while maintaining the app’s state.</p>
+<p>There are also a few ‘hacks’ that make development even faster. When building the Android app, it can take a few minutes to get to the hot reloading phase, because the emulator needs to launch and the app needs to be loaded onto the emulator.</p>
+<p>Something that a few users have started doing (myself included), is developing the app in Desktop mode. This opens a simple window on your Windows, Linux or Mac machine capable of running your app within a few seconds. The best part of this is that you can resize the window to emulate different screen sizes.</p>
+<h2>Issues</h2>
+<p>Flutter is very new and has had a few issues in the last year or two. Currently there is a huge issue with <a href="https://github.com/flutter/flutter/issues/47804">Flutter crashing</a> on certain Huawei phones. It is likely that Flutter will have more issues similar to this until it is more mature.</p>
+<h2>Is it worth it?</h2>
+<p>I would definitely say it is worth looking into for personal projects or small projects that require an Android and iOS app. However, it would be difficult convince clients to trade more stable and reliable cross-platform frameworks for fancy, fast-paced development</p>
+<p>A lot of the issues mentioned can be picked early with proper testing and releases to Alpha and Beta channels.</p>
+<p>I have used Flutter to create an app that is live on <a href="https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes">Google Play</a> and the <a href="https://apps.apple.com/us/app/id1480287625?ref=nmsAssistant">Apple App Store</a>. I may be biased, but I am pleased that I didn’t have to learn Objective-C/Swift or have 2 different code bases doing the same thing just to have an iOS app.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

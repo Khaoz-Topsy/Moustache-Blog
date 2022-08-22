@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Static Site generation the hard way - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Static Site generation the hard way
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">16 April 2020
+                &nbsp;&nbsp;/&nbsp;&nbsp;Performance
+            </span>
+        </b>
+        <h1>Static Site generation the hard way</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/static-site-generation-the-hard-way/cover.png)"></div>
+            <div class="markdown-content">
+                <p>This is by no means the best way to accomplish what I set out to do, but it does work 😅. This is how the new homepage for the Assistant for No Man's Sky Apps will be generated.</p>
+<h2>Problem statement</h2>
+<p>I want the home page for the Assistant for No Man's Sky to be a static page. I want as few API calls and functionality on the website as possible. At the time of writing the home page is an Angular app with quite a few pages of tools and admin functions, with most pages belonging to modules that are lazy loaded. Well this has worked; it has started making issues with out of sync Javascript modules coming from ServiceWorker caching as well as Cloudflare caching. Also, the page's purpose has strayed from being a promotional site to a bulky tool.</p>
+<h2>Common solutions</h2>
+<p><strong>Static Site generator:</strong> There are many many static site generators, although after setting up a few of them I was not impressed with the resulting asset sizes.<br>
+<strong>Server Side Rendered:</strong> I know C# MVC and Razor quite well, so this would have been an easier option to use.</p>
+<h2>ASP.Net MVC solution</h2>
+<p><img src="ASP.Net.MVC-1.png" alt="Data Flow in theoretical MVC application"></p>
+<p>In the above image we can see the number of layers that a request has to go through for a view to be rendered. Now with Cloudflare, the response will be cached and this will reduce the load on the server as well as decrease the number of requests to the API and Database. But this is still bulky, there are quite a few moving parts. If the API goes down I might only notice after Cloudflare's cache has expired and thereafter the wrong data will be cached for some time. It is also a lot more expensive to host a ASP.Net application compared to static files (although thanks to DotNet Core, this isn't much of an issue anymore).</p>
+<p>What I want from that data flow is to grab that HTML that is returned as well as the assets and host it somewhere.</p>
+<h2>First Steps</h2>
+<p>So I decided to go down the route of ASP.Net MVC and manually grab the View that the server responds with, add that to a repository with the static assets and let my CI (Continuous Integration) and CD (Continuous Deployment) pipeline in Azure DevOps release the files to my server of choice. Once the website was in a good state, I started to wonder if there was a away to automate the process.</p>
+<h2>RazorLight</h2>
+<p>I found this package (<a href="https://github.com/toddams/RazorLight">https://github.com/toddams/RazorLight</a>) that is meant to be used for generating HTML emails, but will work for this situation well enough. With RazorLight I could still use my <code>.cshtml</code> files in my MVC project, but now I can get the output as an HTML string, which I can then write to a file <code>index.html</code>.</p>
+<p>Perfect! Now I have the View component as in the image below, time to automate.</p>
+<p><img src="StaticFiles.png" alt="Flow of data with simple Static Files"></p>
+<h2>Automation</h2>
+<p>The first step is to get the console app to generate the files I need in my CI (building) process. I love using Azure DevOps, and they love DotNet Core as much (if not more) as I do. Once the CI process has been setup I should be left with 1 <code>index.html</code> file and a few assets that are used by the <code>index.html</code>. Thereafter it is simple to deploy these files (still using Azure DevOps) in the correct structure onto a server.</p>
+<p>Now, how up to date the information will be, relies on how often this process runs. I don't want this to run every night at midnight (in my time zone) for example, as this would interrupt my biggest user base, the USA. It would also be quite unnecessary as the information displayed does not change that often. Luckily Azure DevOps has an API that I can use to trigger my CI CD process, and I am in control of the API that contains all of my data. So when data is changed through my API, I can make a request to Azure DevOps to generate the static files for my website. Meaning that my static website will almost always be up to date.</p>
+<h2>Future Improvements</h2>
+<p>Since the website's files will be changing less frequently I am a bit more confident in using a ServiceWorker, making the site a PWA (Progressive Web App) to cache all of the front-end files.</p>
+<p><img src="StaticFilesWithPWA-3.png" alt="Flow of data with Static Files in a PWA"></p>
+<h2>Conclusion</h2>
+<p>I will be the first to admit that this is not the cleanest way to achieve a static site. But it does have a few advantages.</p>
+<p>Great SEO</p>
+<ul>
+<li>There is no need to deal manually with HTML and CSS.</li>
+<li>It is automated.</li>
+<li>I did not have to learn a whole bunch of new tech as I would have had to with Nuxt, Gatsby, Hexo, etc.</li>
+<li>This is pretty cool 😎</li>
+</ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Migrating to React from Durandal, slowly - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Migrating to React from Durandal, slowly
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">28 June 2021
+                &nbsp;&nbsp;/&nbsp;&nbsp;migration
+            </span>
+        </b>
+        <h1>Migrating to React from Durandal, slowly</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/migrating-to-react-from-durandal/cover.png)"></div>
+            <div class="markdown-content">
+                <p>One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that <a href="https://github.com/BlueSpire/Durandal/">Durandal's Github</a> repository has not received significant updates in several years and has even been archived.</p>
+<p><img src="/posts/migrating-to-react-from-durandal/durandalGit.png" alt="https://github.com/BlueSpire/Durandal/"></p>
+<p>This presents the dev team with quite a few issues;</p>
+<ul>
+<li>Old packages are picked up as vulnerabilities in Third Party scans. (Which is completely justified)</li>
+<li>This is a security issue, since we cannot easily get fixes for issues picked up by third party security scans by simply updating our framework.</li>
+<li>Any issues in the framework will need to be fixed by us (the dev team), either by finding a work around or by installing more unmaintained packages.</li>
+<li>It is a lot harder to search for solutions to issues encountered on a framework that hasn't had a release in 5 years.</li>
+<li>It takes more developer effort to build features using these tools.</li>
+</ul>
+<p>We also have a few additional problems thanks to our setup (which is slightly more technical);</p>
+<ul>
+<li>Our Javascript minification depends on a outdated Gulp task that cannot handle ES6 syntax.</li>
+<li>The Gulp version used is extremely old, many fruitless hours have been spent trying to rip it out and replace it with something more modern.</li>
+<li>We are locked in to using old Node versions (&lt;= v10) due to our Gulp version and the dependencies of our build setup.</li>
+</ul>
+<p>This problem has been building for years, every day that goes by where we are not migrating to a new framework we are making it more difficult to migrate in the future. The product that we are building is used by quite a few paying users and our client cannot afford the downtime that may come as a result of a rewrite. The client also has several competitors and cannot afford to slow down on feature development and fall behind. The system is also very complex at this point, with a lot of hidden business logic scattered throughout the app as different features were bolted on. With all of this we needed to find a solution that met the following criteria;</p>
+<ul>
+<li>The ability to replace parts of the webapp slowly over time. Which means whatever we choose must play nicely with Durandal.</li>
+<li>A framework/tool that is both modern and will be around long enough for us to make the eventual transition.</li>
+<li>A framework/tool that our team has some experience with, so that we can pick it up quickly and not need to rewrite a lot of the new framework code once the migration is complete.</li>
+<li></li>
+</ul>
+<p>Our solution?</p>
+<h2>React and WebComponents! 🎉</h2>
+<p><img src="/posts/migrating-to-react-from-durandal/alrightSooo.gif" alt="So what does it mean? I am glad you asked!"></p>
+<p>React is a super popular User Interface Component library (yes not a framework) developed by Facebook and is used by millions of developers world wide. It also has a majority share of the front-end Javascript library market. So this is a modern tool that has a lot of developer support and documentation. It should also be around for quite a while, since it's not a Google product (Oooh feel the burn Google!). There are also a lot of people using React which means that there are a lot of potential developers that will keep it alive if the React team abandons the project.</p>
+<p>WebComponents allows us to create custom and reusable HTML tags to contain complex controls and components. While I will admit WebComponents has not done as well as many Javascript Frameworks, it's not a dead solution, not yet 😅. WebComponents loose out on the nice developer tools that React, Angular and Vue provide which allow developers to create custom reusable components. But in this situation we are not relying on the WebComponents developer tools, we are simply using it to wrap our React components.</p>
+<h2>Why WebComponents?</h2>
+<p>Custom components created by either React, Angular, Vue, etc are only really usable in solutions that use the framework/tool's the components were built with. This is where WebComponents shine in our solution. By wrapping our React components as WebComponents, we can register them as html tags (e.g. <code>dashboard-charts</code>) and then use them directly from our Durandal app in the HTML files as (e.g. <code>&lt;dashboard-charts&gt;&lt;/dashboard-charts&gt;</code>) with the added ability to pass properties down with Knockout's bindings (e.g. <code>data-bind=&quot;attr: { id: localId}&quot;</code>). This way we can &quot;inject&quot; our React components into our Durandal front-end and pass data down to the components. This makes migrating a single component at a time possible!</p>
+<h3>The downsides</h3>
+<p>This isn't a perfect solution unfortunately. It is an uncommon way to make use of React and we have found some situations where we needed to use the <a href="https://reactjs.org/docs/state-and-lifecycle.html">React Life Cycle</a> hooks in a suboptimal way. The props that are passed down to the React components are serialised, therefore we cannot pass functions to the React components. The performance of rendering multiple individual React components on the page, each with their own virtual DOM is probably not fantastic, although we have not seen a significant decrease.</p>
+<p>This approach is not used by very few developers (if any, I have not come across anyone else that has taken this approach), so we are still on our own when it comes to fixing framework bugs. The package we depend on to wrap the React components as WebComponents is old and not used very often.</p>
+<p><img src="/posts/migrating-to-react-from-durandal/Screenshot-2021-04-19-104302.jpg" alt="web-react-components npm"></p>
+<p>However, the more the webapp becomes &quot;Reactified&quot; the more all of these issues are resolve and some will even resolve themselves. We can use the React Life Cycles better when not accommodating the way Durandal binds data, the performance will improve as less React components are rendered individually rendered on the page as separate apps and finally we can move away from (directly) depending on outdated packages</p>
+<p><em>Side note: For the communication between React and Durandal we have found that the best solution was to make use of window events. This allows us to listen to and dispatch events on either the React or Durandal side allowing for 2 way communication. This will also be removed over time as React takes over our front-end.</em></p>
+<h3>Unexpected upsides</h3>
+<p>One of the unexpected upside is that our components are very modular, they have to be in order to be called directly from HTML with minimal props. We took advantage of this and use Storybook to both test and check our components before running the whole back-end solution and testing our components within the Durandal app.</p>
+<p>This setup also allows us to keep the React front-end separate from our back-end solution which the Durandal app is very tightly coupled with. We are finally able to deploy front-end changes separately from the back-end code. Meaning that we can have smaller, faster and less risky releases to production.</p>
+<h2>Would I suggest you take this approach?</h2>
+<p>Not unless you have to 😅. This solution will never beat a front-end application built with your favourite framework/tool. This solution is only intended to get us away from a dying framework as gently as possible and keeping the interests of our client in mind. No clients want to hear that time needs to be spent on a rewrite, it almost never adds value to their business. But having a dead framework running on their webapp and spending days building simple features that their competitors can do in hours does hurt. The longer we take to migrate, the more likely we are to get stuck with either situation and at the worst both a rewrite and slow development.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

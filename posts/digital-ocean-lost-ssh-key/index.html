@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Inside My Mind - Kurt Lourens">
+    <title>Digital Ocean lost SSH key 🔑 - Inside My Mind</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="mailto:hi@kurtlourens.com">
+    <link rel="me" href="https://kurtlourens.com" type="text/html">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="theme-color" content="#7986cb">
+    <meta name="subject" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" type="image/png" sizes="x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="" color="#7986cb">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="Inside My Mind - Kurt Lourens">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7986cb">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AssistantNMS">
+    <meta name="twitter:creator" content="@KhaozTopsy">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
+    <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
+    <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta name="twitter:image:alt" content="Logo of AssistantNMS">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inside My Mind">
+    <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
+    <meta property="og:image:alt" content="Logo of AssistantNMS">
+    <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
+    <meta property="og:site_name" content="Inside My Mind">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="Kurt Lourens">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#7986cb">
+    <meta name="msapplication-starturl" content="/?pwa-app" />
+
+    <link rel="preload" as="image" href="/assets/img/loader.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family&#x3D;Blinker:wght@100;300;400;600&amp;display&#x3D;swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bulma.dark.min.css">
+
+    <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
+
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.1">
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        :root {
+            --blog-font-family: 'Blinker'
+        }
+    </style>
+
+    <script nonce="schema" type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "{{owner.name}}",
+    "givenName": "{{owner.name}}",
+    "familyName": "{{owner.name}}",
+    "additionalName": "{{owner.additionalName}}",
+    "url": "{{baseUrl}}",
+    "image": "{{owner.image}}",
+    "description": "{{meta.description}}",
+    "jobTitle": "{{owner.jobTitle}}",
+    "owns": [
+        {
+            "@type": "OwnershipInfo",
+            "name": "{{meta.title}}",
+            "url": "{{baseUrl}}"
+        }
+    ]
+}</script>
+</head>
+<body id="blog-body" class="is-loading">
+    <nav class="navbar post">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/assets/img/logo.png" alt="Inside My Mind - Kurt Lourens" />
+            </a>
+        </div>
+    
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    Inside My Mind — Digital Ocean lost SSH key 🔑
+                </div>
+            </div>
+        </div>
+    
+        <div class="progress-wrapper">
+            <div class="progress"></div>
+        </div>
+    </nav>
+    <div class="post-wrapper inner">
+        <b class="meta">
+            <span class="upper-case">24 January 2019
+                &nbsp;&nbsp;/&nbsp;&nbsp;Digital Ocean
+            </span>
+        </b>
+        <h1>Digital Ocean lost SSH key 🔑</h1>
+
+        <div class="content">
+            <div class="cover" style="background-image: url(/posts/digital-ocean-lost-ssh-key/cover.jpg)"></div>
+            <div class="markdown-content">
+                <p>How I regained access to my Digital Ocean Droplet 💧</p>
+<p>One evening I was messing around with adding SSH connections to <a href="https://mremoteng.org/">mRemoteNG</a> which is a great tool for people who remote desktop or SSH into machines regularly. Long ago I had generated an SSH key pair and added the public key onto a few of the services I regularly use such as (GitHub or Azure Repos). My private key was saved in a format that Putty could not understand. Following a guide, I imported my private key and converted it to the right format, saved the converted key to a new file and successfully connected to a Raspberry Pi via SSH in <a href="https://mremoteng.org/">mRemoteNG</a> 🎉🥳.</p>
+<p>That was a Friday, on Monday I was tapping away on my keyboard not knowing the headache I was about to have. I got to a logical stop, typed <code>git push</code> ...</p>
+<p><strong style="color: red">Please make sure you have the correct access rights and the repository exists.</strong></p>
+<p>I was quite confused, but right below the command a message told me that my private key could not be read and therefore was not being used. I navigated to the private key and viewed it. Immediately my heart sank 💔. I could see that when I converted my private key to a format Putty could understand, it changed the file.</p>
+<p>It might be time to swap out my SSH keys...</p>
+<h2>Generating SSH key pair</h2>
+<ul>
+<li>Open up a terminal and type <code>ssh-keygen -t rsa -b 4096</code></li>
+<li>Answer the questions that come up (it is okay to just keep hitting enter)</li>
+</ul>
+<h2>Setting up your key on Digital Ocean</h2>
+<ul>
+<li>Copy the contents of your public key's file ({HomeFolder}/.ssh/{keyName}.pub)</li>
+<li>Go to the <a href="https://cloud.digitalocean.com/account/security">Security Section</a></li>
+<li>Paste the SSH key</li>
+<li>Click &quot;Add SSH Key&quot;</li>
+</ul>
+<h2>Adding your key to a Droplet 💧</h2>
+<p>If you now create a Droplet it will already have your SSH key in its <code>authorized_keys</code> file meaning that you can SSH in to you Droplet by type <code>ssh root@0.0.0.0</code> into your terminal (replacing <code>0.0.0.0</code> with your Droplet's IP address).</p>
+<p>If you already have a Droplet you will have to SSH into it using whichever method you used before and add your SSH key to its <code>authorized_keys</code> file manually. <a href="https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/">This is a very good guide</a>.</p>
+<p>If you already have a Droplet and you are no longer able to SSH into it because you no longer have a usable private key (like the situation described above). It is going to be a bit trickier.</p>
+<h2>Last ditch attempt to add the key</h2>
+<p>Digital Ocean luckily has a button to launch a Console Window connected to your Droplet that you can use almost the same way that you would use your terminal connected via SSH to the Droplet. I unfortunately had a problem with this browser Console Window. When pasting my SSH key the Console would print the first few characters correctly and then it would start pasting special characters which were not present in the original.</p>
+<p>To solve this, open the file <code>/etc/ssh/sshd_config</code> using the Console and change the value <code>PasswordAuthentication</code> to <code>yes</code>. Restart the server and you will be able to log into your Droplet using Password Authentication. Then you can follow <code>this very good guide</code> to add your new SSH key. Restart the server again once you are done.</p>
+<p>And now you should be able to access your Digital Ocean Droplet via SSH using the private key you have just set up 🎉.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-page-loader"></div>
+    <div class="full-page-loader">
+        <img src="/assets/img/loader.svg" draggable="false" alt="loading-animation">
+    </div></body>
+
+<script>
+    window.config = {
+        gtag: ''
+    }
+</script>
+
+
+
+<script defer src="/assets/js/base.js?v=0.0.1"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.1"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.1"></script>
+<script defer src="/assets/js/serviceWorker.js?v=0.0.1"></script>
+
+
+<script defer src="/assets/js/highlight.min.js"></script>
+
+
+</html>

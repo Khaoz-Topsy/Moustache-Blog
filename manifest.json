@@ -1,0 +1,13 @@
+{
+"name": "Inside My Mind - Kurt Lourens",
+"short_name": "",
+"description": "This is where I write about my Dev experiences, and anything else I think is worth reading 😁",
+"lang": "en-US",
+"scope": "/",
+"start_url": "/?standalone",
+"display": "standalone",
+"icons": [
+],
+"background_color": "#1b1f22",
+"theme_color": "#7986cb"
+}
