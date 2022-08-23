@@ -1,19 +1,20 @@
-const PRECACHE = 'precache-v0.0.2';
+const PRECACHE = 'precache-v0.0.3';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
 'index.html',
 './', // Alias for index.html
-'',
-'',
-'',
-'/assets/css/base.css',
-'/assets/css/main.css',
+'/assets/css/site.css',
+'/assets/css/bulma.css',
+'/assets/css/bulma.min.css',
+'/assets/css/highlight/atom-one-dark-reasonable.min.css',
+'/assets/css/highlight/default.min.css',
 '/assets/js/analytics.js',
-'/assets/js/custom.js',
-'/assets/js/skrollr.min.js',
-'/assets/js/testimonials.js',
+'/assets/js/base.js',
+'/assets/js/builder.js',
+'/assets/js/highlight.min.js',
+'/assets/js/scroll.js',
 ];
 
 // The install handler takes care of precaching the resources we always need.
