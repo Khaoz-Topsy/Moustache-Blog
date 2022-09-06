@@ -71,7 +71,7 @@ async function buildPosts() {
         }
 
         // Redirects
-        if (metaJsonObj.redirectFrom != null) {
+        if (process.env.CI && metaJsonObj.redirectFrom != null) {
             const redirectFileDestFolder = `./public/${metaJsonObj.redirectFrom}`;
             if (!fs.existsSync(redirectFileDestFolder)) {
                 fs.mkdirSync(redirectFileDestFolder);
