@@ -1,5 +1,6 @@
 {
     "url": "digital-ocean-lost-ssh-key",
+    "redirectFrom": "digital-ocean-lost-ssh-key",
     "title": "Digital Ocean lost SSH key 🔑",
     "excerpt": "A solution to having lost your SSH key and no longer being able to log in to a Digital Ocean Droplet",
     "imageUrl": "cover.jpg",

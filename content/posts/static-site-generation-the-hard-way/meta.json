@@ -1,5 +1,6 @@
 {
     "url": "static-site-generation-the-hard-way",
+    "redirectFrom": "static-site-generation-the-hard-way",
     "title": "Static Site generation the hard way",
     "excerpt": "How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man's Sky website",
     "imageUrl": "cover.png",

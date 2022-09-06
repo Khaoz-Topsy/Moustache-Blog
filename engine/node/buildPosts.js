@@ -14,6 +14,9 @@ async function buildPosts() {
     const projectData = JSON.parse(projectDataContents);
 
     const fullFileName = './templates/_postTemplate.hbs';
+    const redirectTemplatePath = './templates/_redirectTemplate.hbs';
+
+    const redirectFoldersToIgnore = [];
 
     const postsFolderPath = './content/posts';
     const postFolders = fs.readdirSync(postsFolderPath, { withFileTypes: true });
@@ -66,7 +69,29 @@ async function buildPosts() {
                 await copyFile(`${assetsDir}/${assetFile}`, `${fileDestFolder}/${assetFile}`);
             }
         }
+
+        // Redirects
+        if (metaJsonObj.redirectFrom != null) {
+            const redirectFileDestFolder = `./public/${metaJsonObj.redirectFrom}`;
+            if (!fs.existsSync(redirectFileDestFolder)) {
+                fs.mkdirSync(redirectFileDestFolder);
+            }
+
+            const redirectTemplate = await readFile(redirectTemplatePath, 'utf8');
+            const redirectTemplateFunc = Handlebars.compile(redirectTemplate);
+            const redirectTemplateFullData = {
+                title: metaJsonObj.title,
+                url: fileDestFolderRel,
+            };
+            const compiledRedirectTemplate = redirectTemplateFunc(redirectTemplateFullData);
+            fs.writeFile(`${redirectFileDestFolder}/index.html`, compiledRedirectTemplate, ['utf8'], () => { });
+
+            redirectFoldersToIgnore.push(`./${metaJsonObj.redirectFrom}/*`);
+        }
     }
+
+    // Ignore Redirect files
+    fs.writeFile('./public/.gitignore', redirectFoldersToIgnore.join('\n'), ['utf8'], () => { });
 }
 
 buildPosts()

@@ -1,5 +1,6 @@
 {
     "url": "flutter-ci-android-app-bundle-aab",
+    "redirectFrom": "flutter-ci-android-app-bundle-aab",
     "title": "Flutter CI Android App Bundle 📦",
     "excerpt": "How to create an Android App Bundle aab file with Azure DevOps Continuous Integration extensions / tasks. I made an Azure DevOps extension that lets you...",
     "imageUrl": "cover.png",

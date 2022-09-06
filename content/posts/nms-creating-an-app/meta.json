@@ -1,5 +1,6 @@
 {
     "url": "nms-creating-an-app",
+    "redirectFrom": "nms-creating-an-app",
     "title": "Creating an App for No Man's Sky",
     "excerpt": "How I created the Assistant for No Man's Sky App. Accidentally released it, and have been working on making it better ever since",
     "imageUrl": "cover.jpg",
