@@ -12,7 +12,7 @@ $progress-bar-height: 4px;
     &.post {
         position: fixed;
         padding-top: $progress-bar-height;
-        transform: translateY(-5em);
+        transform: translateY(-120%);
         transition: transform 500ms ease-in-out;
 
         &.show {
@@ -20,14 +20,12 @@ $progress-bar-height: 4px;
         }
 
         .progress-wrapper {
+            position: absolute;
+            left: -1%;
+            top: 0;
             width: 102%;
-            margin-left: -1%;
-            margin-right: -1%;
 
             .progress {
-                position: absolute;
-                left: 0;
-                top: 0;
                 height: $progress-bar-height;
                 background-color: $secondary;
                 border-top-left-radius: 0;
