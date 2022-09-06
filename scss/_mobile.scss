@@ -25,6 +25,7 @@
         padding-top: 6em;
     }
 }
+
 .post-feed {
     .post-card {
         @media screen and (max-width: 500px) {
@@ -66,5 +67,13 @@
     @media screen and (max-width: 400px) {
         margin-top: 0;
         padding: 0.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .post-wrapper {
+        .content .markdown-content {
+            padding: 1em 1em 5em 1em;
+        }
     }
 }
