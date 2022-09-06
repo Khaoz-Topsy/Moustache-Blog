@@ -86,7 +86,7 @@ async function buildPosts() {
             const compiledRedirectTemplate = redirectTemplateFunc(redirectTemplateFullData);
             fs.writeFile(`${redirectFileDestFolder}/index.html`, compiledRedirectTemplate, ['utf8'], () => { });
 
-            redirectFoldersToIgnore.push(`./${metaJsonObj.redirectFrom}/*`);
+            redirectFoldersToIgnore.push(`${metaJsonObj.redirectFrom}/*`);
         }
     }
 
