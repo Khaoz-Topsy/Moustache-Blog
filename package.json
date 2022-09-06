@@ -1,6 +1,6 @@
 {
   "name": "kurt-lourens-blog-templ",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "build": "npm-run-all --sequential data:* sass:* template:*",
     "dev": "node ./engine/node/devServer.js",
@@ -28,8 +28,8 @@
   "author": "Kurt Lourens",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "1.2.2",
-    "nodemon": "^1.19.4"
+    "live-server": "^1.1.0",
+    "nodemon": "^2.0.19"
   },
   "dependencies": {
     "@types/markdown-it": "^12.2.3",

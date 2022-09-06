@@ -29,6 +29,11 @@ jobs:
           npm ci
           npm run build
 
+    - name: Ensure that all files in public are deployed
+      run: |
+        cd public
+        echo "/node_modules" > .gitignore
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.4
         with:
