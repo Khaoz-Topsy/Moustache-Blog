@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-    <link rel="index" href="https://temp.kurtlourens.com/">
-    <link rel="canonical" href="https://temp.kurtlourens.com/">
+    <link rel="index" href="https://blog.kurtlourens.com/">
+    <link rel="canonical" href="https://blog.kurtlourens.com/">
     <meta name="referrer" content="no-referrer">
     <link rel="manifest" href="/manifest.json">
     <link rel="author" href="/humans.txt">
@@ -46,14 +46,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AssistantNMS">
     <meta name="twitter:creator" content="@KhaozTopsy">
-    <meta name="twitter:url" content="https://temp.kurtlourens.com/">
+    <meta name="twitter:url" content="https://blog.kurtlourens.com/">
     <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
     <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
     <meta name="twitter:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
     <meta name="twitter:image:alt" content="Logo of AssistantNMS">
 
     <!-- Facebook -->
-    <meta property="og:url" content="https://temp.kurtlourens.com/">
+    <meta property="og:url" content="https://blog.kurtlourens.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Inside My Mind">
     <meta property="og:image" content="https://nmsassistant.com/assets/img/twitterCard.png">
@@ -84,7 +84,7 @@
     <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
 
-    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.5">
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.8">
 
     <noscript>
         <link rel="stylesheet" href="/assets/css/noscript.css" />
@@ -177,7 +177,12 @@
             </div>
         </div>
 
+        <br /><br />
+
+        <div id="disqus_thread"></div>
     </div>
+
+    <a href="/" title="Home" class="post-go-back">🡄</a>
 
     <div class="full-page-loader"></div>
     <div class="full-page-loader">
@@ -186,18 +191,34 @@
 
 <script>
     window.config = {
-        gtag: ''
+        gtag: 'UA-97325462-3',
+        posthog: 'phc_bS84eGionOtpDcJivDn5u3fRL9tvLut3UvGJEekLnvz',
     }
 </script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97325462-3"></script>
 
-<script defer src="/assets/js/base.js?v=0.0.5"></script>
-<script defer src="/assets/js/analytics.js?v=0.0.5"></script>
-<script defer src="/assets/js/scroll.js?v=0.0.5"></script>
+<script defer src="/assets/js/base.js?v=0.0.8"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.8"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.8"></script>
 
 
 <script defer src="/assets/js/highlight.min.js"></script>
 
+
+<script>
+    var disqus_config = function () {
+        this.page.url = "https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key-test";
+        this.page.identifier = "digital-ocean-lost-ssh-key";
+    };
+
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://khaoztopsy-inside-my-mind.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 </html>

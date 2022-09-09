@@ -4,6 +4,10 @@ function customOnLoad() {
     bodyElem?.classList?.remove?.('is-loading');
 }
 
+function setAsLoading() {
+    const bodyElem = document.getElementById('blog-body');
+    bodyElem?.classList?.add?.('is-loading');
+}
 
 const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
@@ -21,6 +25,16 @@ const registerServiceWorker = async () => {
         }
     }
 };
+
+function delayAnchorClick(elem, event) {
+    setAsLoading();
+    event.preventDefault();
+    elem.removeAttribute("onclick");
+
+    setTimeout(() => {
+        elem.click();
+    }, 250);
+}
 
 setTimeout(() => {
     customOnLoad?.();

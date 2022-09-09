@@ -147,12 +147,16 @@
   z-index: 1003;
   background-color: #303030;
   color: white;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   pointer-events: none;
 }
 
+body.is-loading {
+  overflow: hidden;
+}
+
 .is-loading .full-page-loader {
-  opacity: 0.9;
+  opacity: 0.99;
 }
 
 .full-page-loader img {
@@ -160,6 +164,9 @@
   margin: 0 auto;
 }
 
+.builder-wrapper {
+  position: relative;
+}
 .builder-wrapper #editor-tab-content {
   margin-top: 5vh;
 }
@@ -201,6 +208,15 @@
 .builder-wrapper #editor-tab-content .editor-toolbar a:nth-child(1),
 .builder-wrapper #editor-tab-content .editor-toolbar.fullscreen a:nth-child(1) {
   margin-left: 0;
+}
+.builder-wrapper .sidebar {
+  height: 100%;
+  width: calc((100% - 1040px) / 2);
+}
+.builder-wrapper .sidebar.left {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .post-feed {
@@ -330,6 +346,13 @@
 }
 .post-wrapper .content > .markdown-content {
   padding: 2em 3em 5em 3em;
+}
+
+.post-go-back {
+  position: absolute;
+  top: 0;
+  left: 0.25em;
+  font-size: 3em;
 }
 
 .content > .markdown-content {

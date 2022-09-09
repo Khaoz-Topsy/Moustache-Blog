@@ -52,6 +52,12 @@ async function convertMarkdownToHtml(content) {
 
 
 var simplemde = new SimpleMDE({
+    autofocus: true,
+    forceSync: true,
+    autosave: {
+        enabled: true,
+        uniqueId: "klBlogDraft",
+    },
     element: document.getElementById('builder-textarea'),
     previewRender: function (plainText, preview) {
         convertMarkdownToHtml(plainText)
@@ -61,3 +67,47 @@ var simplemde = new SimpleMDE({
         return 'Loading...'; // Returns HTML from a custom parser
     },
 });
+
+// function loadDraftsFromLocalStorage() {
+//     const draftsString = localStorage.getItem('drafts');
+//     const draftsArr = JSON.parse(draftsString);
+//     console.log('draftsArr', draftsArr);
+//     return draftsArr;
+// }
+
+// function addDraft() {
+//     const date = new Date();
+//     const epoch = Math.floor(date / 1000);
+//     const currentDrafts = loadDraftsFromLocalStorage() ?? [];
+//     newDrafts = [...currentDrafts, {
+//         id: epoch,
+//         value: '',
+//     }];
+//     localStorage.setItem('drafts', JSON.stringify(newDrafts));
+//     displayDrafts(newDrafts);
+// }
+
+// function displayDrafts(drafts) {
+//     const draftItems = document.querySelectorAll('#drafts-display li');
+//     for (const draftChild of draftItems) {
+//         if (draftChild.id != 'add-draft') {
+//             draftChild.remove();
+//         }
+//     }
+
+//     const draftsDisp = document.getElementById('drafts-display');
+//     const currentDrafts = (drafts != null && drafts.length > 0)
+//         ? [...drafts]
+//         : loadDraftsFromLocalStorage();
+//     for (const currentDraft of currentDrafts) {
+//         const newNode = document.createElement("li");
+//         newNode.innerHTML = currentDraft.id;
+//         draftsDisp.appendChild(newNode);
+//     }
+// }
+
+// window.onload = () => {
+//     setTimeout(() => {
+//         displayDrafts();
+//     }, 250);
+// }
