@@ -1,4 +1,5 @@
 .builder-wrapper {
+    position: relative;
     // .tabs {
     //     margin-bottom: 0;
     // }
@@ -50,6 +51,16 @@
         }
     }
 
+    .sidebar {
+        height: 100%;
+        width: calc(calc(100% - 1040px) / 2);
+
+        &.left {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
     // .hidden {
     //     display: none;
     // }
