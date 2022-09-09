@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
-            <img src="/assets/img/logo.png" alt="{{meta.appName}}" />
+            <img src="{{navbar.icon}}" alt="{{meta.appName}}" />
         </a>
         <div class="navbar-burger">
             <span></span>
@@ -12,10 +12,14 @@
 
     <div class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="/">
-                Home
+
+            {{#each navbar.items as |navItem|}}
+            <a class="navbar-item" href="{{navItem.url}}">
+                {{navItem.name}}
             </a>
-            <div class="navbar-item has-dropdown is-hoverable">
+            {{/each}}
+
+            {{!-- <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
                     Docs
                 </a>
@@ -43,7 +47,7 @@
                         Components
                     </a>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         {{!-- <div class="navbar-end">

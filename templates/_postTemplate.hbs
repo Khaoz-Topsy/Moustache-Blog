@@ -21,11 +21,32 @@
             </div>
         </div>
 
+        <br /><br />
+
+        <div id="disqus_thread"></div>
     </div>
+
+    <a href="/" title="Home" class="post-go-back">🡄</a>
 
     {{> components/fullPageLoader}}
 </body>
 
 {{> components/scripts includeHighlighJs="true"}}
+
+{{#if disqusSiteId}}
+<script>
+    var disqus_config = function () {
+        this.page.url = "{{baseUrl}}posts/{{post.url}}-test";
+        this.page.identifier = "{{post.url}}";
+    };
+
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{disqusSiteId}}/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+{{/if}}
 
 </html>
