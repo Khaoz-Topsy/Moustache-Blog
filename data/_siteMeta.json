@@ -49,13 +49,13 @@
         "creator": "@KhaozTopsy",
         "imageAlt": "Logo of AssistantNMS",
         "metaImageSize": "summary_large_image",
-        "imageUrl": "https://nmsassistant.com/assets/img/twitterCard.png"
+        "imageUrl": "https://blog.kurtlourens.com/assets/img/twitterCard.png"
     },
     "facebookCard": {
         "locale": "en_UK",
         "creator": "Kurt Lourens",
         "imageAlt": "Logo of AssistantNMS",
-        "imageUrl": "https://nmsassistant.com/assets/img/twitterCard.png"
+        "imageUrl": "https://blog.kurtlourens.com/assets/img/twitterCard.png"
     },
     "analytics": {
         "googleAnalyticsTag": "UA-97325462-3",

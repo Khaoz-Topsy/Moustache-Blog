@@ -14,7 +14,7 @@
         <div class="navbar-start">
 
             {{#each navbar.items as |navItem|}}
-            <a class="navbar-item" href="{{navItem.url}}">
+            <a class="navbar-item" href="{{navItem.url}}" title="{{navItem.name}}">
                 {{navItem.name}}
             </a>
             {{/each}}
