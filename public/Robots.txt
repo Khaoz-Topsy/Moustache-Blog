@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://blog.kurtlourens.com/sitemap.xml
+Disallow: /ghost/
+Disallow: /p/
