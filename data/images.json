@@ -17,27 +17,27 @@
         {
             "type": "image/png",
             "size": "x76",
-            "href": "assets/favicon/apple-touch-icon-76x76.png"
+            "href": "/assets/favicon/apple-touch-icon-76x76.png"
         },
         {
             "type": "image/png",
             "size": "x114",
-            "href": "assets/favicon/apple-touch-icon-114x114.png"
+            "href": "/assets/favicon/apple-touch-icon-114x114.png"
         },
         {
             "type": "image/png",
             "size": "x120",
-            "href": "assets/favicon/apple-touch-icon-120x120.png"
+            "href": "/assets/favicon/apple-touch-icon-120x120.png"
         },
         {
             "type": "image/png",
             "size": "x144",
-            "href": "assets/favicon/apple-touch-icon-144x144.png"
+            "href": "/assets/favicon/apple-touch-icon-144x144.png"
         },
         {
             "type": "image/png",
             "size": "x152",
-            "href": "assets/favicon/apple-touch-icon-152x152.png"
+            "href": "/assets/favicon/apple-touch-icon-152x152.png"
         }
     ]
 }
