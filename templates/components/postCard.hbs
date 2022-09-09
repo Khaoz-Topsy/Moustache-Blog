@@ -1,4 +1,4 @@
-<a href="/posts/{{url}}/" class="post-card {{#each tags}}tag-{{this}}{{/each}}">
+<a href="/posts/{{url}}/" class="post-card {{#each tags}}tag-{{this}}{{/each}}" onclick="delayAnchorClick(this, event)">
     <div class="post-card-image-link post-card-image">
         <img src="/posts/{{url}}/{{imageUrl}}" alt="{{title}}" />
     </div>

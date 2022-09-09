@@ -147,12 +147,16 @@
   z-index: 1003;
   background-color: #303030;
   color: white;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   pointer-events: none;
 }
 
+body.is-loading {
+  overflow: hidden;
+}
+
 .is-loading .full-page-loader {
-  opacity: 0.9;
+  opacity: 0.99;
 }
 
 .full-page-loader img {
