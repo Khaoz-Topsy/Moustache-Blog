@@ -91,6 +91,8 @@ async function readPostJsonFiles(siteData) {
 
         const metaJsonFileContents = await readFile(metaFilePath, 'utf8');
         const metaJsonObj = JSON.parse(metaJsonFileContents);
+        const postUrlPath = `${siteData.baseUrl}posts/${metaJsonObj.url}/`;
+        metaJsonObj.imageUrl = `${postUrlPath}${metaJsonObj.imageUrl}`;
         posts.push({
             ...metaJsonObj,
             meta: {
