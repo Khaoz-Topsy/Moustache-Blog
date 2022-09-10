@@ -38,13 +38,16 @@ async function generateFullJson() {
 
     const siteDataFull = {
         ...siteData,
+        version: pjson.version,
         headers: [
             ...cspContent.headers.map(csp => ({ "name": csp, "value": header })),
             ...(siteData.headers ?? []),
         ]
     };
 
-    fs.writeFile(`./data/generated/_project.json`, JSON.stringify(siteDataFull), ['utf8'], () => { });
+    const projectString = JSON.stringify(siteDataFull);
+    fs.writeFile(`./data/generated/_project.json`, projectString, ['utf8'], () => { });
+    fs.writeFile(`./public/assets/json/project.json`, projectString, ['utf8'], () => { });
     console.log(`Successfully compiled _project.json`);
 }
 

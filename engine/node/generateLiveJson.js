@@ -30,7 +30,9 @@ async function generateLiveJson() {
         // donations: donationList.filter(d => d.type != 'Patreon'),
     };
 
-    fs.writeFile('./data/generated/live.json', JSON.stringify(fullJson), ['utf8'], () => { });
+    const liveString = JSON.stringify(fullJson);
+    fs.writeFile('./data/generated/live.json', liveString, ['utf8'], () => { });
+    fs.writeFile('./public/assets/json/live.json', liveString, ['utf8'], () => { });
 }
 
 generateLiveJson();

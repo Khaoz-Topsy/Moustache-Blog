@@ -11,3 +11,6 @@
 /public/sitemap.xml
 /public/web.config
 /public/posts/*
+/public/robots.txt
+/public/assets/json/project.json
+/public/assets/json/live.json
