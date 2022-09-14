@@ -373,7 +373,8 @@ body.is-loading {
 .content > .markdown-content p {
   margin-bottom: 1.5em;
 }
-.content > .markdown-content img {
+.content > .markdown-content img,
+.content > .markdown-content video {
   display: block;
   margin: 0 auto 0.5em auto;
 }

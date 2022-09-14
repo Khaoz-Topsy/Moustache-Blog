@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="Inside My Mind - Kurt Lourens">
-    <title>Flutter with CI / CD - Inside My Mind</title>
+    <title>Why does software decay? - Inside My Mind</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -127,7 +127,7 @@
         <div class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item">
-                    Inside My Mind — Flutter with CI / CD
+                    Inside My Mind — Why does software decay?
                 </div>
             </div>
         </div>
@@ -138,30 +138,33 @@
     </nav>
     <div class="post-wrapper inner">
         <b class="meta">
-            <span class="upper-case">7 April 2019
-                &nbsp;&nbsp;/&nbsp;&nbsp;Flutter
+            <span class="upper-case">12 September 2022
+                &nbsp;&nbsp;/&nbsp;&nbsp;Software
             </span>
         </b>
-        <h1>Flutter with CI / CD</h1>
+        <h1>Why does software decay?</h1>
 
         <div class="content">
-            <div class="cover" style="background-image: url(/posts/flutter-with-ci-cd/cover.png)"></div>
+            <div class="cover" style="background-image: url(/posts/software-decay/cover.png)"></div>
             <div class="markdown-content">
-                <p>Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used. It didn't take me too long to get the hang of Dart (the language used to write Flutter apps), and turns out that Flutter is blazing fast ⚡ (at least from what I have seen).</p>
-<p><a href="https://visualstudio.com"><img src="https://khaoznet.visualstudio.com/KhaozNet/_apis/build/status/KhaozNet.FlutterCV%20-%20CI" alt="Build status"></a> <a href="https://visualstudio.com"><img src="https://khaoznet.vsrm.visualstudio.com/_apis/public/Release/badge/b5441643-fd7c-4330-92d7-bffc23a7e0a4/18/25" alt="Production Deployment status"></a></p>
-<p>One thing that I found was lacking for Flutter Developers was Microsoft's AppCenter support. For all the other ways that I could think of for writing Android or iOS apps, AppCenter had an easy way to setup a CI (Continuous Integration) and CD (Continuous Deployment) pipeline. While not having a CI / CD pipeline setup isn't the worst thing, especially if you are a team of one. I still did not want to build the APK on my machine and then upload it to the Google Play Console each time I wanted to release a new version.</p>
-<p>Thankfully someone had already written a Azure Devops Marketplace extension to build Flutter apps on Azure Devops' agents.
-<a href="https://marketplace.visualstudio.com/items?itemName=aloisdeniel.flutter">https://marketplace.visualstudio.com/items?itemName=aloisdeniel.flutter</a></p>
-<p>So at the end of my first Flutter app's journey I had a pipeline where if I committed and pushed code on the develop branch of my repository my app would be built and deployed to the Google Play Store's Internal test track, where myself and anyone else specified could download the app and test it. And if I committed and pushed code to master, the production version of the app would be pushed to the Google Play Store as a publicly available app to download.</p>
-<p>In the process of building the app I got familiar with Azure Devops' Secure File storage. I used the Secure File storage to hold my app's keystore, Google-Services.json and environment settings.</p>
-<ul>
-<li>The keystore file is what signs you Android app and your app is required to be signed for every upload to the Google Play Store.</li>
-<li>The Google-Services.json is a file which has Authentication information for Google's Cloud Services. I am using their Cloud Messaging service to be able to send push notification's to my app's users.</li>
-<li>The environment settings file contains settings that the app requires which are different on my local machine versus the production version of the app. In this case I used this file to hold my AppCenter AppSecret, which is used for Analytics.</li>
-</ul>
-<p>I believe that it is important to automate as much as possible, especially if you are doing a repetitive task. Automation can save a lot of time, as one of my friends once said...</p>
-<p><em>Friends don't let friends deploy manually.</em></p>
-<p><strong>Update:</strong> here is the <a href="http://kurtlourens.com/docs/flutterBuild.yaml" target="_blank" rel="noopener norefferer">flutterBuild.yaml</a> file requested by Cobalt</p>
+                <h3>Isn't software immortal?</h3>
+<p>If we look at what software is made of, it is just text and binary data, it should last forever, right? Yet there is something that forces our teams to keep working on them to maintain their functionality.</p>
+<p>Let's look at the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">First website</a>, it is still available online. This site went live in 1991 and yet it still works, because this is a website, the source code is visible to us. The source code is as simple as the page looks and based on the HTML I see, it likely hasn't changed much since it was first written.</p>
+<blockquote>
+<p>Even though the HTML standard has changed over the years, almost everything written in the past is still supported. You can think of the changes to the HTML standard as mostly being additive.</p>
+</blockquote>
+<p>This &quot;stability&quot; has undoubtedly contributed to the first website still being supported but does point out that it has a dependency on the HTML standard continuing to support backward compatibility as well as browsers (Chrome, Firefox, Opera, etc) rendering HTML in the same way.</p>
+<h3>Dependencies</h3>
+<p>It is almost unavoidable these days to write software with 0 dependencies. The deeper you look the more dependencies you will find. Let's take a look at the <code>create-react-app</code> command, which sets up a modern React project for you with all the dependencies a starting project &quot;needs&quot;. A fresh project will net you 13484* dependencies via npm packages.</p>
+<p><video src="./escalation.mp4" autoplay muted loop></video></p>
+<p>The number is a bit high and needs a bit of context, while each of those is an individual package, many are unintentional. The <code>create-react-app</code> tool may only have a handful of dependencies, but each of those has dependencies and so on until you end up with thousands of packages. Well, this is a ~problem~ feature of npm it has made development easier over the years.</p>
+<p>Each of those npm packages may have a person or team maintaining the package, adding features and breaking others, many of those packages are dormant. To add to the struggles of modern front-end development, security vulnerabilities are constantly being found and patched, which require updates and/or removal of packages.</p>
+<p>While the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">First website</a> has a dependency on the HTML standard and the way browsers render HTML, I would classify these dependencies as low risk. They are unlikely to change as any change to them impacts a large number of communities and projects. While npm packages change often and drastically. Even if you compiled all of your dependencies into a <code>bundle.js</code> and vowed never to change or update it, you are at the mercy of the javascript interpreters inside browsers and your site will be vulnerable to vulnerabilities <em>eventually</em>.</p>
+<h3>Environment</h3>
+<p>While the web has been relatively stable over the last 3 decades, the same cannot be said for mobile software. We have seen systems rise and fall such as Blackberry, Windows Mobile, Symbian, etc.</p>
+<h2>Conclusion</h2>
+<p><br /><br /><br /></p>
+<p><code>*</code> The stat comes from <a href="https://blog.appsignal.com/2020/05/14/javascript-growing-pains-from-0-to-13000-dependencies.html">AppSignal - JavaScript Growing Pains: From 0 to 13,000 Dependencies - Nikola Đuza on May 14, 2020</a></p>
 
             </div>
         </div>
@@ -198,8 +201,8 @@
 
 <script>
     var disqus_config = function () {
-        this.page.url = "https://blog.kurtlourens.com/posts/flutter-with-ci-cd";
-        this.page.identifier = "flutter-with-ci-cd";
+        this.page.url = "https://blog.kurtlourens.com/posts/software-decay";
+        this.page.identifier = "software-decay";
     };
 
     (function () {
