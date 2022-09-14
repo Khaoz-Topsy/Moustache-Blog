@@ -1,0 +1,28 @@
+{
+    "url": "software-decay",
+    "draft": true,
+    "title": "Why does software decay?",
+    "excerpt": "Why is it that some software projects work decades after initial development and other projects require constant upkeep?",
+    "imageUrl": "cover.png",
+    "publishDate": "2022-09-12",
+    "isFeatured": false,
+    "tags": [
+        "Software",
+        "Maintenance"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}
