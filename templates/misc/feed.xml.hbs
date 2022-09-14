@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>{{meta.appName}}</title>
+        <description>The latest articles on {{meta.appName}}.
+        </description>
+        <link>{{baseUrl}}</link>
+        <image>
+            <url>
+                {{twitterCard.imageUrl}}
+            </url>
+            <title>{{meta.appName}}</title>
+            <link>{{baseUrl}}</link>
+        </image>
+        <atom:link rel="self" type="application/rss+xml" href="{{baseUrl}}feed.xml" />
+        <language>en</language>
+        {{#each posts as |post index|}}
+        <item>
+            <title>{{post.title}}</title>
+            <icon>
+                <url>{{post.imageUrl}}</url>
+            </icon>
+            <logo>
+                <url>{{post.imageUrl}}</url>
+            </logo>
+            <image>
+                <url>
+                    {{post.imageUrl}}
+                </url>
+                <title>{{post.title}}</title>
+                <link>{{baseUrl}}posts/{{post.url}}</link>
+            </image>
+            <dc:creator>{{owner.name}}</dc:creator>
+            <pubDate>{{post.publishDate}}</pubDate>
+            <link>{{baseUrl}}posts/{{post.url}}</link>
+            <guid>{{baseUrl}}posts/{{post.url}}</guid>
+            <description>
+                <p>{{post.excerpt}}</p>
+                <img src="{{post.imageUrl}}" alt="preview">
+            </description>
+            {{#each posts.tags as |tag index|}}
+            <category>{{tag}}</category>
+            {{/each}}
+        </item>
+        {{/each}}
+    </channel>
+</rss>
