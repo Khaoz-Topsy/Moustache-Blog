@@ -1,6 +1,6 @@
 {
   "name": "kurt-lourens-blog-templ",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "scripts": {
     "build": "npm-run-all --sequential data:* sass:* template:*",
     "dev": "node ./engine/node/devServer.js",
@@ -15,6 +15,7 @@
     "template:misc": "node engine/node/buildMiscFiles.js",
     "prePublish:minifyGeneratedFiles": "node engine/node/minifyPublicFiles.js",
     "watch:template": "nodemon -e hbs -x \"npm run template\"",
+    "watch:template:posts": "nodemon -e md -x \"npm run template:posts\"",
     "watch:sass": "nodemon -e scss -x \"npm run sass\""
   },
   "repository": {
