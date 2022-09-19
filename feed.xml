@@ -27,12 +27,12 @@
                     https://blog.kurtlourens.com/posts/software-decay/cover.png
                 </url>
                 <title>Why does software decay?</title>
-                <link>posts/software-decay</link>
+                <link>https://blog.kurtlourens.com/posts/software-decay</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2022-09-16</pubDate>
-            <link>posts/software-decay</link>
-            <guid>posts/software-decay</guid>
+            <link>https://blog.kurtlourens.com/posts/software-decay</link>
+            <guid>https://blog.kurtlourens.com/posts/software-decay</guid>
             <description>
                 <p>Why is it that some software projects work decades after initial development and other projects require constant upkeep? Does the software we write today have an expiration date?</p>
                 <img src="https://blog.kurtlourens.com/posts/software-decay/cover.png" alt="preview" />
@@ -51,12 +51,12 @@
                     https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal/cover.png
                 </url>
                 <title>Migrating to React from Durandal, slowly</title>
-                <link>posts/migrating-to-react-from-durandal</link>
+                <link>https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2021-06-28</pubDate>
-            <link>posts/migrating-to-react-from-durandal</link>
-            <guid>posts/migrating-to-react-from-durandal</guid>
+            <link>https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal</link>
+            <guid>https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal</guid>
             <description>
                 <p>One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that Durandal&#x27;s Github repository has not received significant updates in several years and has even been archived. </p>
                 <img src="https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal/cover.png" alt="preview" />
@@ -75,12 +75,12 @@
                     https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself/cover.png
                 </url>
                 <title>Stream Emojis - Build it yourself 🛠</title>
-                <link>posts/stream-emojis-build-it-yourself</link>
+                <link>https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2021-03-25</pubDate>
-            <link>posts/stream-emojis-build-it-yourself</link>
-            <guid>posts/stream-emojis-build-it-yourself</guid>
+            <link>https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself</link>
+            <guid>https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself</guid>
             <description>
                 <p>I have been streaming the development of the Assistant for No Man&#x27;s Sky for a while now, over on my Twitch channel...</p>
                 <img src="https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself/cover.png" alt="preview" />
@@ -99,12 +99,12 @@
                     https://blog.kurtlourens.com/posts/localization-localisation/cover.png
                 </url>
                 <title>Localization / Localisation - Part 1</title>
-                <link>posts/localization-localisation</link>
+                <link>https://blog.kurtlourens.com/posts/localization-localisation</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2021-01-7</pubDate>
-            <link>posts/localization-localisation</link>
-            <guid>posts/localization-localisation</guid>
+            <link>https://blog.kurtlourens.com/posts/localization-localisation</link>
+            <guid>https://blog.kurtlourens.com/posts/localization-localisation</guid>
             <description>
                 <p>Localisation is one of the parts of designing software that can be very difficult and can be extremely costly when overlooked. As with most...</p>
                 <img src="https://blog.kurtlourens.com/posts/localization-localisation/cover.png" alt="preview" />
@@ -123,12 +123,12 @@
                     https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky/cover.png
                 </url>
                 <title>1 Year since launching the Assistant for No Man&#x27;s Sky</title>
-                <link>posts/1-year-since-launching-the-assistant-for-no-mans-sky</link>
+                <link>https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2020-08-31</pubDate>
-            <link>posts/1-year-since-launching-the-assistant-for-no-mans-sky</link>
-            <guid>posts/1-year-since-launching-the-assistant-for-no-mans-sky</guid>
+            <link>https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky</link>
+            <guid>https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky</guid>
             <description>
                 <p>My life has changed quite a lot since the release of the Assistant for No Man&#x27;s Sky app! I have learned so much and had the honour of talking with some of the most passionate No Man&#x27;s Sky players worldwide!</p>
                 <img src="https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky/cover.png" alt="preview" />
@@ -147,12 +147,12 @@
                     https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way/cover.png
                 </url>
                 <title>Static Site generation the hard way</title>
-                <link>posts/static-site-generation-the-hard-way</link>
+                <link>https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2020-04-16</pubDate>
-            <link>posts/static-site-generation-the-hard-way</link>
-            <guid>posts/static-site-generation-the-hard-way</guid>
+            <link>https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way</link>
+            <guid>https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way</guid>
             <description>
                 <p>How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man&#x27;s Sky website</p>
                 <img src="https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way/cover.png" alt="preview" />
@@ -171,12 +171,12 @@
                     https://blog.kurtlourens.com/posts/assistantnms-incident-1/cover.png
                 </url>
                 <title>AssistantNMS Incident 2020-03-31</title>
-                <link>posts/assistantnms-incident-1</link>
+                <link>https://blog.kurtlourens.com/posts/assistantnms-incident-1</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2020-03-31</pubDate>
-            <link>posts/assistantnms-incident-1</link>
-            <guid>posts/assistantnms-incident-1</guid>
+            <link>https://blog.kurtlourens.com/posts/assistantnms-incident-1</link>
+            <guid>https://blog.kurtlourens.com/posts/assistantnms-incident-1</guid>
             <description>
                 <p>Recently I have been adding documentation to the Assistant for No Man&#x27;s Sky API. While I was adding some &#x27;useful&#x27; comments and explanations I was also tightening up it&#x27;s security...</p>
                 <img src="https://blog.kurtlourens.com/posts/assistantnms-incident-1/cover.png" alt="preview" />
@@ -195,12 +195,12 @@
                     https://blog.kurtlourens.com/posts/intro-to-flutter/cover.jpg
                 </url>
                 <title>Intro to Flutter</title>
-                <link>posts/intro-to-flutter</link>
+                <link>https://blog.kurtlourens.com/posts/intro-to-flutter</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2020-03-25</pubDate>
-            <link>posts/intro-to-flutter</link>
-            <guid>posts/intro-to-flutter</guid>
+            <link>https://blog.kurtlourens.com/posts/intro-to-flutter</link>
+            <guid>https://blog.kurtlourens.com/posts/intro-to-flutter</guid>
             <description>
                 <p>Flutter is a relatively recent addition to cross-platform mobile app development frameworks. It is a Google product, open source, and has a very strong and growing community. If you’re not too familiar with Flutter, the below will cover how it works, and the pros and cons of using it.</p>
                 <img src="https://blog.kurtlourens.com/posts/intro-to-flutter/cover.jpg" alt="preview" />
@@ -219,12 +219,12 @@
                     https://blog.kurtlourens.com/posts/nms-creating-an-app/cover.jpg
                 </url>
                 <title>Creating an App for No Man&#x27;s Sky</title>
-                <link>posts/nms-creating-an-app</link>
+                <link>https://blog.kurtlourens.com/posts/nms-creating-an-app</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-11-26</pubDate>
-            <link>posts/nms-creating-an-app</link>
-            <guid>posts/nms-creating-an-app</guid>
+            <link>https://blog.kurtlourens.com/posts/nms-creating-an-app</link>
+            <guid>https://blog.kurtlourens.com/posts/nms-creating-an-app</guid>
             <description>
                 <p>How I created the Assistant for No Man&#x27;s Sky App. Accidentally released it, and have been working on making it better ever since</p>
                 <img src="https://blog.kurtlourens.com/posts/nms-creating-an-app/cover.jpg" alt="preview" />
@@ -243,12 +243,12 @@
                     https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab/cover.png
                 </url>
                 <title>Flutter CI Android App Bundle 📦</title>
-                <link>posts/flutter-ci-android-app-bundle-aab</link>
+                <link>https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-08-7</pubDate>
-            <link>posts/flutter-ci-android-app-bundle-aab</link>
-            <guid>posts/flutter-ci-android-app-bundle-aab</guid>
+            <link>https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab</link>
+            <guid>https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab</guid>
             <description>
                 <p>How to create an Android App Bundle aab file with Azure DevOps Continuous Integration extensions / tasks. I made an Azure DevOps extension that lets you...</p>
                 <img src="https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab/cover.png" alt="preview" />
@@ -267,12 +267,12 @@
                     https://blog.kurtlourens.com/posts/flutter-pub-upgrade/cover.png
                 </url>
                 <title>Flutter pub upgrade Issue [SOLVED]</title>
-                <link>posts/flutter-pub-upgrade</link>
+                <link>https://blog.kurtlourens.com/posts/flutter-pub-upgrade</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-06-04</pubDate>
-            <link>posts/flutter-pub-upgrade</link>
-            <guid>posts/flutter-pub-upgrade</guid>
+            <link>https://blog.kurtlourens.com/posts/flutter-pub-upgrade</link>
+            <guid>https://blog.kurtlourens.com/posts/flutter-pub-upgrade</guid>
             <description>
                 <p>How I encountered and solved a Flutter pub upgrade issue when trying to use Flutter Desktop on the master channel of Flutter</p>
                 <img src="https://blog.kurtlourens.com/posts/flutter-pub-upgrade/cover.png" alt="preview" />
@@ -291,12 +291,12 @@
                     https://blog.kurtlourens.com/posts/side-project-management/cover.jpg
                 </url>
                 <title>Creating an App for No Man&#x27;s Sky</title>
-                <link>posts/side-project-management</link>
+                <link>https://blog.kurtlourens.com/posts/side-project-management</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-05-20</pubDate>
-            <link>posts/side-project-management</link>
-            <guid>posts/side-project-management</guid>
+            <link>https://blog.kurtlourens.com/posts/side-project-management</link>
+            <guid>https://blog.kurtlourens.com/posts/side-project-management</guid>
             <description>
                 <p>I have (like many Software Engineers) have too many side projects. I think it is due to the intoxicating ☠ feeling of starting a project that has a lot of potential.</p>
                 <img src="https://blog.kurtlourens.com/posts/side-project-management/cover.jpg" alt="preview" />
@@ -315,12 +315,12 @@
                     https://blog.kurtlourens.com/posts/flutter-with-ci-cd/cover.png
                 </url>
                 <title>Flutter with CI / CD</title>
-                <link>posts/flutter-with-ci-cd</link>
+                <link>https://blog.kurtlourens.com/posts/flutter-with-ci-cd</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-04-07</pubDate>
-            <link>posts/flutter-with-ci-cd</link>
-            <guid>posts/flutter-with-ci-cd</guid>
+            <link>https://blog.kurtlourens.com/posts/flutter-with-ci-cd</link>
+            <guid>https://blog.kurtlourens.com/posts/flutter-with-ci-cd</guid>
             <description>
                 <p>Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used.</p>
                 <img src="https://blog.kurtlourens.com/posts/flutter-with-ci-cd/cover.png" alt="preview" />
@@ -339,12 +339,12 @@
                     https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key/cover.jpg
                 </url>
                 <title>Digital Ocean lost SSH key 🔑</title>
-                <link>posts/digital-ocean-lost-ssh-key</link>
+                <link>https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2019-01-24</pubDate>
-            <link>posts/digital-ocean-lost-ssh-key</link>
-            <guid>posts/digital-ocean-lost-ssh-key</guid>
+            <link>https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key</link>
+            <guid>https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key</guid>
             <description>
                 <p>A solution to having lost your SSH key and no longer being able to log in to a Digital Ocean Droplet</p>
                 <img src="https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key/cover.jpg" alt="preview" />
@@ -363,12 +363,12 @@
                     https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned/cover.jpg
                 </url>
                 <title>KurtLourens.com Redesigned 🧩 (How it was made)</title>
-                <link>posts/kurtlourens-com-redesigned</link>
+                <link>https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2018-11-26</pubDate>
-            <link>posts/kurtlourens-com-redesigned</link>
-            <guid>posts/kurtlourens-com-redesigned</guid>
+            <link>https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned</link>
+            <guid>https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned</guid>
             <description>
                 <p>kurtlourens.com is my online CV website. I first created the site way back in Feb 2016. Looking back at, the site was poorly constructed as I had a very basic understanding of...</p>
                 <img src="https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned/cover.jpg" alt="preview" />
@@ -387,12 +387,12 @@
                     https://blog.kurtlourens.com/posts/mathmax-io-hacking/cover.jpg
                 </url>
                 <title>MathMax.io &#x27;Hacking&#x27;</title>
-                <link>posts/mathmax-io-hacking</link>
+                <link>https://blog.kurtlourens.com/posts/mathmax-io-hacking</link>
             </image>
-            <dc:creator></dc:creator>
+            <dc:creator>Kurt Lourens</dc:creator>
             <pubDate>2018-02-23</pubDate>
-            <link>posts/mathmax-io-hacking</link>
-            <guid>posts/mathmax-io-hacking</guid>
+            <link>https://blog.kurtlourens.com/posts/mathmax-io-hacking</link>
+            <guid>https://blog.kurtlourens.com/posts/mathmax-io-hacking</guid>
             <description>
                 <p>kurtlourens.com is my online CV website. I first created the site way back in Feb 2016. Looking back at, the site was poorly constructed as I had a very basic understanding of...</p>
                 <img src="https://blog.kurtlourens.com/posts/mathmax-io-hacking/cover.jpg" alt="preview" />
