@@ -84,7 +84,7 @@
     <link rel="stylesheet" href="/assets/css/highlight/default.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/highlight/atom-one-dark-reasonable.min.css">
 
-    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.15">
+    <link rel="stylesheet" href="/assets/css/site.css?v=0.0.16">
 
     <noscript>
         <link rel="stylesheet" href="/assets/css/noscript.css" />
@@ -138,7 +138,7 @@
     </nav>
     <div class="post-wrapper inner">
         <b class="meta">
-            <span class="upper-case">12 September 2022
+            <span class="upper-case">16 September 2022
                 &nbsp;&nbsp;/&nbsp;&nbsp;Software
             </span>
         </b>
@@ -147,23 +147,25 @@
         <div class="content">
             <div class="cover" style="background-image: url(/posts/software-decay/cover.png)"></div>
             <div class="markdown-content">
-                <h3>Isn't software immortal?</h3>
-<p>If we look at what software is made of, it is just text and binary data, it should last forever, right? Yet there is something that forces our teams to keep working on them to maintain their functionality.</p>
+                <p>A good friend of mine one day complained about Software Engineering in general, they were frustrated about how the software they were in charge of just kept failing, crashing, etc. And they left me with a lingering question, why doesn't software just work forever when the source code doesn't change?</p>
+<h3>Isn't software immortal?</h3>
+<p>If we look at what software is made of, it is just text and binary data, it should last forever, right? We expect that in computing, doing the same thing over and over will produce the same results. But that isn't always the case, there is something that forces our teams to keep working on them to maintain their functionality.</p>
 <p>Let's look at the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">First website</a>, it is still available online. This site went live in 1991 and yet it still works, because this is a website, the source code is visible to us. The source code is as simple as the page looks and based on the HTML I see, it likely hasn't changed much since it was first written.</p>
 <blockquote>
 <p>Even though the HTML standard has changed over the years, almost everything written in the past is still supported. You can think of the changes to the HTML standard as mostly being additive.</p>
 </blockquote>
 <p>This &quot;stability&quot; has undoubtedly contributed to the first website still being supported but does point out that it has a dependency on the HTML standard continuing to support backward compatibility as well as browsers (Chrome, Firefox, Opera, etc) rendering HTML in the same way.</p>
 <h3>Dependencies</h3>
-<p>It is almost unavoidable these days to write software with 0 dependencies. The deeper you look the more dependencies you will find. Let's take a look at the <code>create-react-app</code> command, which sets up a modern React project for you with all the dependencies a starting project &quot;needs&quot;. A fresh project will net you 13484* dependencies via npm packages.</p>
+<p>It is almost unavoidable these days to write software with 0 dependencies. The deeper you look the more dependencies you will find. Let's take a look at the <code>create-react-app</code> command, which sets up a modern React project for you with all the dependencies a starting project &quot;needs&quot;. A fresh project will net you 13484<code>*</code> dependencies via npm packages.</p>
 <p><video src="./escalation.mp4" autoplay muted loop></video></p>
-<p>The number is a bit high and needs a bit of context, while each of those is an individual package, many are unintentional. The <code>create-react-app</code> tool may only have a handful of dependencies, but each of those has dependencies and so on until you end up with thousands of packages. Well, this is a ~problem~ feature of npm it has made development easier over the years.</p>
+<p>The number is a bit high and needs a bit of context, while each of those is an individual package, many are unintentional. The <code>create-react-app</code> tool may only have a handful of dependencies, but each of those has dependencies and so on until you end up with thousands of packages. Well, this is a <s>problem</s> feature of npm it has made development easier over the years.</p>
 <p>Each of those npm packages may have a person or team maintaining the package, adding features and breaking others, many of those packages are dormant. To add to the struggles of modern front-end development, security vulnerabilities are constantly being found and patched, which require updates and/or removal of packages.</p>
 <p>While the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">First website</a> has a dependency on the HTML standard and the way browsers render HTML, I would classify these dependencies as low risk. They are unlikely to change as any change to them impacts a large number of communities and projects. While npm packages change often and drastically. Even if you compiled all of your dependencies into a <code>bundle.js</code> and vowed never to change or update it, you are at the mercy of the javascript interpreters inside browsers and your site will be vulnerable to vulnerabilities <em>eventually</em>.</p>
-<h3>Environment</h3>
-<p>While the web has been relatively stable over the last 3 decades, the same cannot be said for mobile software. We have seen systems rise and fall such as Blackberry, Windows Mobile, Symbian, etc.</p>
+<h3>Integration dependencies</h3>
+<p>I think that some of the more difficult problems to solve are the dependencies on software that your project integrates with, such as payment gateways, SaaS products, etc. In my opinion, these can be the most vulnerable parts of your projects. The biggest risk comes from the integration possibly changing the way it expects your project to communicate with it. Often these changes happen with very little notice and there is virtually no guarantee that they will support your project for its whole lifecycle. I have also found that starting up old projects is made more tricky when they have these integrations.</p>
 <h2>Conclusion</h2>
-<p><br /><br /><br /></p>
+<p>While a zero-dependency project is probably not possible or maintainable, it is good to be aware of what can speed up the decay of the software you write today. We need to be aware of how quickly and often software changes and we need to prepare for it when designing systems. Otherwise, our future selves are going to have a tough time 😅.</p>
+<br />
 <p><code>*</code> The stat comes from <a href="https://blog.appsignal.com/2020/05/14/javascript-growing-pains-from-0-to-13000-dependencies.html">AppSignal - JavaScript Growing Pains: From 0 to 13,000 Dependencies - Nikola Đuza on May 14, 2020</a></p>
 
             </div>
@@ -191,9 +193,9 @@
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97325462-3"></script>
 
-<script defer src="/assets/js/base.js?v=0.0.15"></script>
-<script defer src="/assets/js/analytics.js?v=0.0.15"></script>
-<script defer src="/assets/js/scroll.js?v=0.0.15"></script>
+<script defer src="/assets/js/base.js?v=0.0.16"></script>
+<script defer src="/assets/js/analytics.js?v=0.0.16"></script>
+<script defer src="/assets/js/scroll.js?v=0.0.16"></script>
 
 
 <script defer src="/assets/js/highlight.min.js"></script>
@@ -207,7 +209,7 @@
 
     (function () {
         var d = document, s = d.createElement('script');
-        s.src = 'https://khaoztopsy-inside-my-mind.disqus.com/embed.js';
+        s.src = 'https://inside-my-mind-v2.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

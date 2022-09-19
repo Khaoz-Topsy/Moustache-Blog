@@ -15,6 +15,30 @@
         <atom:link rel="self" type="application/rss+xml" href="https://blog.kurtlourens.com/feed.xml" />
         <language>en</language>
         <item>
+            <title>Why does software decay?</title>
+            <icon>
+                <url>https://blog.kurtlourens.com/posts/software-decay/cover.png</url>
+            </icon>
+            <logo>
+                <url>https://blog.kurtlourens.com/posts/software-decay/cover.png</url>
+            </logo>
+            <image>
+                <url>
+                    https://blog.kurtlourens.com/posts/software-decay/cover.png
+                </url>
+                <title>Why does software decay?</title>
+                <link>posts/software-decay</link>
+            </image>
+            <dc:creator></dc:creator>
+            <pubDate>2022-09-16</pubDate>
+            <link>posts/software-decay</link>
+            <guid>posts/software-decay</guid>
+            <description>
+                <p>Why is it that some software projects work decades after initial development and other projects require constant upkeep? Does the software we write today have an expiration date?</p>
+                <img src="https://blog.kurtlourens.com/posts/software-decay/cover.png" alt="preview">
+            </description>
+        </item>
+        <item>
             <title>Migrating to React from Durandal, slowly</title>
             <icon>
                 <url>https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal/cover.png</url>
