@@ -35,7 +35,7 @@
             <guid>posts/software-decay</guid>
             <description>
                 <p>Why is it that some software projects work decades after initial development and other projects require constant upkeep? Does the software we write today have an expiration date?</p>
-                <img src="https://blog.kurtlourens.com/posts/software-decay/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/software-decay/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -59,7 +59,7 @@
             <guid>posts/migrating-to-react-from-durandal</guid>
             <description>
                 <p>One of the client projects that I work on makes use of Durandal and KnockoutJS for their front end. This approach is quite old, so old that Durandal&#x27;s Github repository has not received significant updates in several years and has even been archived. </p>
-                <img src="https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/migrating-to-react-from-durandal/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -83,7 +83,7 @@
             <guid>posts/stream-emojis-build-it-yourself</guid>
             <description>
                 <p>I have been streaming the development of the Assistant for No Man&#x27;s Sky for a while now, over on my Twitch channel...</p>
-                <img src="https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/stream-emojis-build-it-yourself/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -107,7 +107,7 @@
             <guid>posts/localization-localisation</guid>
             <description>
                 <p>Localisation is one of the parts of designing software that can be very difficult and can be extremely costly when overlooked. As with most...</p>
-                <img src="https://blog.kurtlourens.com/posts/localization-localisation/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/localization-localisation/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -131,7 +131,7 @@
             <guid>posts/1-year-since-launching-the-assistant-for-no-mans-sky</guid>
             <description>
                 <p>My life has changed quite a lot since the release of the Assistant for No Man&#x27;s Sky app! I have learned so much and had the honour of talking with some of the most passionate No Man&#x27;s Sky players worldwide!</p>
-                <img src="https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/1-year-since-launching-the-assistant-for-no-mans-sky/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -155,7 +155,7 @@
             <guid>posts/static-site-generation-the-hard-way</guid>
             <description>
                 <p>How I used MVC Razor pages to generate a static website from dynamic data for the Assistant for No Man&#x27;s Sky website</p>
-                <img src="https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/static-site-generation-the-hard-way/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -179,7 +179,7 @@
             <guid>posts/assistantnms-incident-1</guid>
             <description>
                 <p>Recently I have been adding documentation to the Assistant for No Man&#x27;s Sky API. While I was adding some &#x27;useful&#x27; comments and explanations I was also tightening up it&#x27;s security...</p>
-                <img src="https://blog.kurtlourens.com/posts/assistantnms-incident-1/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/assistantnms-incident-1/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -203,7 +203,7 @@
             <guid>posts/intro-to-flutter</guid>
             <description>
                 <p>Flutter is a relatively recent addition to cross-platform mobile app development frameworks. It is a Google product, open source, and has a very strong and growing community. If you’re not too familiar with Flutter, the below will cover how it works, and the pros and cons of using it.</p>
-                <img src="https://blog.kurtlourens.com/posts/intro-to-flutter/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/intro-to-flutter/cover.jpg" alt="preview" />
             </description>
         </item>
         <item>
@@ -227,7 +227,7 @@
             <guid>posts/nms-creating-an-app</guid>
             <description>
                 <p>How I created the Assistant for No Man&#x27;s Sky App. Accidentally released it, and have been working on making it better ever since</p>
-                <img src="https://blog.kurtlourens.com/posts/nms-creating-an-app/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/nms-creating-an-app/cover.jpg" alt="preview" />
             </description>
         </item>
         <item>
@@ -251,7 +251,7 @@
             <guid>posts/flutter-ci-android-app-bundle-aab</guid>
             <description>
                 <p>How to create an Android App Bundle aab file with Azure DevOps Continuous Integration extensions / tasks. I made an Azure DevOps extension that lets you...</p>
-                <img src="https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/flutter-ci-android-app-bundle-aab/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -275,7 +275,7 @@
             <guid>posts/flutter-pub-upgrade</guid>
             <description>
                 <p>How I encountered and solved a Flutter pub upgrade issue when trying to use Flutter Desktop on the master channel of Flutter</p>
-                <img src="https://blog.kurtlourens.com/posts/flutter-pub-upgrade/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/flutter-pub-upgrade/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -299,7 +299,7 @@
             <guid>posts/side-project-management</guid>
             <description>
                 <p>I have (like many Software Engineers) have too many side projects. I think it is due to the intoxicating ☠ feeling of starting a project that has a lot of potential.</p>
-                <img src="https://blog.kurtlourens.com/posts/side-project-management/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/side-project-management/cover.jpg" alt="preview" />
             </description>
         </item>
         <item>
@@ -323,7 +323,7 @@
             <guid>posts/flutter-with-ci-cd</guid>
             <description>
                 <p>Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used.</p>
-                <img src="https://blog.kurtlourens.com/posts/flutter-with-ci-cd/cover.png" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/flutter-with-ci-cd/cover.png" alt="preview" />
             </description>
         </item>
         <item>
@@ -347,7 +347,7 @@
             <guid>posts/digital-ocean-lost-ssh-key</guid>
             <description>
                 <p>A solution to having lost your SSH key and no longer being able to log in to a Digital Ocean Droplet</p>
-                <img src="https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/digital-ocean-lost-ssh-key/cover.jpg" alt="preview" />
             </description>
         </item>
         <item>
@@ -371,7 +371,7 @@
             <guid>posts/kurtlourens-com-redesigned</guid>
             <description>
                 <p>kurtlourens.com is my online CV website. I first created the site way back in Feb 2016. Looking back at, the site was poorly constructed as I had a very basic understanding of...</p>
-                <img src="https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/kurtlourens-com-redesigned/cover.jpg" alt="preview" />
             </description>
         </item>
         <item>
@@ -395,7 +395,7 @@
             <guid>posts/mathmax-io-hacking</guid>
             <description>
                 <p>kurtlourens.com is my online CV website. I first created the site way back in Feb 2016. Looking back at, the site was poorly constructed as I had a very basic understanding of...</p>
-                <img src="https://blog.kurtlourens.com/posts/mathmax-io-hacking/cover.jpg" alt="preview">
+                <img src="https://blog.kurtlourens.com/posts/mathmax-io-hacking/cover.jpg" alt="preview" />
             </description>
         </item>
     </channel>
