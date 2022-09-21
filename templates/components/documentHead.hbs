@@ -9,8 +9,10 @@
     <link rel="icon" type="{{this.type}}" sizes="{{this.size}}" href="{{this.href}}">
     {{/each}}
 
-    <link rel="index" href="{{baseUrl}}">
+    {{#each canonical}}
     <link rel="canonical" href="{{baseUrl}}">
+    {{/each}}
+    <link rel="index" href="{{baseUrl}}">
     <meta name="referrer" content="no-referrer">
     <link rel="manifest" href="/manifest.json">
     <link rel="author" href="/humans.txt">
