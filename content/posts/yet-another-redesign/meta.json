@@ -1,0 +1,28 @@
+{
+    "url": "yet-another-redesign",
+    "draft": true,
+    "title": "Why I often redesign my websites and apps",
+    "excerpt": "",
+    "imageUrl": "cover.png",
+    "publishDate": "2022-09-12",
+    "isFeatured": false,
+    "tags": [
+        "Software",
+        "Maintenance"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}
