@@ -1,5 +1,6 @@
 {
     "url": "flutter-with-ci-cd",
+    "redirectFrom": "flutter-with-ci-cd",
     "title": "Flutter with CI / CD",
     "excerpt": "Recently I started messing around with creating an app using Flutter. It seems to be really close to React Native in terms of how Components (in this case Widgets) are created and used.",
     "imageUrl": "cover.png",
