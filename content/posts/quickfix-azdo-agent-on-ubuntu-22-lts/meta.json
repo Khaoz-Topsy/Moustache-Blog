@@ -1,0 +1,27 @@
+{
+    "url": "quickfix-azdo-agent-on-ubuntu-22-lts",
+    "title": "QuickFix: AzDoAgent on Ubuntu 22.04 LTS",
+    "excerpt": "Why is it that some software projects work decades after initial development and other projects require constant upkeep? Does the software we write today have an expiration date?",
+    "imageUrl": "cover.png",
+    "publishDate": "2022-10-12",
+    "isFeatured": false,
+    "tags": [
+        "QuickFix",
+        "Software"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}
