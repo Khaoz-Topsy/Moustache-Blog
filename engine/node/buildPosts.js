@@ -44,10 +44,26 @@ async function buildPosts() {
             fs.mkdirSync(fileDestFolder);
         }
 
+        const postUrlPath = `${projectData.baseUrl}posts/${metaJsonObj.url}/`;
+        const fullImageUrl = `${postUrlPath}${metaJsonObj.imageUrl}`;
+
+        const localProjectData = {
+            ...projectData,
+            twitterCard: {
+                ...projectData.twitterCard,
+                imageUrl: customUtil.fallbackValues(metaJsonObj.twitter.imageUrl, fullImageUrl),
+
+            },
+            facebookCard: {
+                ...projectData.facebookCard,
+                imageUrl: customUtil.fallbackValues(metaJsonObj.facebook.imageUrl, fullImageUrl),
+            }
+        };
+
         const template = await readFile(fullFileName, 'utf8');
         const templateFunc = Handlebars.compile(template);
         const templateFullData = {
-            ...projectData,
+            ...localProjectData,
             documentTitle: metaJsonObj.title,
             post: {
                 ...metaJsonObj,

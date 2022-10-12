@@ -26,9 +26,17 @@ function postDateFormat(dateString) {
     return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
 }
 
+function fallbackValues(...params) {
+    for (const par of params) {
+        if (par != null && par.length > 0) return par;
+    }
+    return '';
+}
+
 module.exports = {
     markdown: markdown,
     convertMarkdownToHtml: convertMarkdownToHtml,
     monthNames: monthNames,
     postDateFormat: postDateFormat,
+    fallbackValues: fallbackValues,
 }

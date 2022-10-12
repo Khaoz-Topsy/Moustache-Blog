@@ -4,6 +4,7 @@ const util = require('util');
 const readFile = util.promisify(fs.readFile);
 
 const pjson = require('../../package.json');
+const customUtil = require('./util');
 
 async function generateFullJson() {
     process.env['NODE_ENV'] = pjson.version;
@@ -100,18 +101,18 @@ async function readPostJsonFiles(siteData) {
         posts.push({
             ...metaJsonObj,
             meta: {
-                title: fallbackValues(metaJsonObj.meta?.title, metaJsonObj.title, ''),
-                description: fallbackValues(metaJsonObj.meta?.description, metaJsonObj.description, ''),
+                title: customUtil.fallbackValues(metaJsonObj.meta?.title, metaJsonObj.title, ''),
+                description: customUtil.fallbackValues(metaJsonObj.meta?.description, metaJsonObj.description, ''),
             },
             twitter: {
-                title: fallbackValues(metaJsonObj.twitter?.title, metaJsonObj.title, ''),
-                description: fallbackValues(metaJsonObj.twitter?.description, metaJsonObj.description, ''),
-                imageUrl: fallbackValues(metaJsonObj.twitter?.imageUrl, metaJsonObj.imageUrl, ''),
+                title: customUtil.fallbackValues(metaJsonObj.twitter?.title, metaJsonObj.title, ''),
+                description: customUtil.fallbackValues(metaJsonObj.twitter?.description, metaJsonObj.description, ''),
+                imageUrl: customUtil.fallbackValues(metaJsonObj.twitter?.imageUrl, metaJsonObj.imageUrl, ''),
             },
             facebook: {
-                title: fallbackValues(metaJsonObj.facebook?.title, metaJsonObj.title, ''),
-                description: fallbackValues(metaJsonObj.facebook?.description, metaJsonObj.description, ''),
-                imageUrl: fallbackValues(metaJsonObj.facebook?.imageUrl, metaJsonObj.imageUrl, ''),
+                title: customUtil.fallbackValues(metaJsonObj.facebook?.title, metaJsonObj.title, ''),
+                description: customUtil.fallbackValues(metaJsonObj.facebook?.description, metaJsonObj.description, ''),
+                imageUrl: customUtil.fallbackValues(metaJsonObj.facebook?.imageUrl, metaJsonObj.imageUrl, ''),
             }
         });
     }
@@ -122,13 +123,6 @@ async function readPostJsonFiles(siteData) {
         ...siteData,
         posts: [...posts],
     };
-}
-
-function fallbackValues(...params) {
-    for (const par of params) {
-        if (par != null && par.length > 0) return par;
-    }
-    return '';
 }
 
 
