@@ -95,6 +95,7 @@ async function readPostJsonFiles(siteData) {
         if (metaJsonObj.draft) continue;
 
         const postUrlPath = `${siteData.baseUrl}posts/${metaJsonObj.url}/`;
+        metaJsonObj.relImageUrl = `posts/${metaJsonObj.url}/${metaJsonObj.imageUrl}`;
         metaJsonObj.imageUrl = `${postUrlPath}${metaJsonObj.imageUrl}`;
         posts.push({
             ...metaJsonObj,

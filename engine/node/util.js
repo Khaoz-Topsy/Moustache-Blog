@@ -5,12 +5,12 @@ const markdown = MarkdownIt({
     html: true,
     highlight: function (str, lang) {
         return (
-            '<pre><code class="hljs">' +
+            '<pre><code class="hljs language-' + lang + '">' +
             markdown.utils.escapeHtml(str) +
             "</code></pre>"
         );
     },
-});
+}).use(require('markdown-it-copy'));
 
 async function convertMarkdownToHtml(content) {
     const rendered = await markdown.render(content);

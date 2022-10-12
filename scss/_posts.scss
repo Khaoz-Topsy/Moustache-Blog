@@ -182,7 +182,7 @@
     }
 
     p {
-        margin-bottom: 1.5em;
+        margin-bottom: 0;
     }
 
     img,
@@ -199,6 +199,13 @@
         background: #e5eff5;
         color: black;
         border-radius: 3px;
+    }
+
+    pre {
+        code {
+            background: #242424;
+            color: #e5eff5;
+        }
     }
 
     blockquote {
