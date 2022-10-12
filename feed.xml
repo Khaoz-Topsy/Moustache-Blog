@@ -15,6 +15,30 @@
         <atom:link rel="self" type="application/rss+xml" href="https://blog.kurtlourens.com/feed.xml" />
         <language>en</language>
         <item>
+            <title>Azure DevOps agent on Ubuntu 22.04 LTS</title>
+            <icon>
+                <url>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png</url>
+            </icon>
+            <logo>
+                <url>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png</url>
+            </logo>
+            <image>
+                <url>
+                    https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png
+                </url>
+                <title>Azure DevOps agent on Ubuntu 22.04 LTS</title>
+                <link>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts</link>
+            </image>
+            <dc:creator>Kurt Lourens</dc:creator>
+            <pubDate>2022-10-12</pubDate>
+            <link>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts</link>
+            <guid>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts</guid>
+            <description>
+                <p>How I recently set up an Azure DevOps agent on Ubuntu 22.04. This post describes a workaround for the &quot;No usable version of libssl was found&quot; error message.</p>
+                <img src="https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png" alt="preview" />
+            </description>
+        </item>
+        <item>
             <title>Why does software decay?</title>
             <icon>
                 <url>https://blog.kurtlourens.com/posts/software-decay/cover.png</url>

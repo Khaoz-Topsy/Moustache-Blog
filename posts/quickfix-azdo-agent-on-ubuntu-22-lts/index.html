@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="Inside My Mind - Kurt Lourens">
-    <title>Why I often redesign my websites and apps - Inside My Mind</title>
+    <title>Azure DevOps agent on Ubuntu 22.04 LTS - Inside My Mind</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -48,14 +48,14 @@
     <meta name="twitter:url" content="https://blog.kurtlourens.com/">
     <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
     <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
-    <meta name="twitter:image" content="https://blog.kurtlourens.com/posts/yet-another-redesign/cover.png">
+    <meta name="twitter:image" content="https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png">
     <meta name="twitter:image:alt" content="Logo of AssistantNMS">
 
     <!-- Facebook -->
     <meta property="og:url" content="https://blog.kurtlourens.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Inside My Mind">
-    <meta property="og:image" content="https://blog.kurtlourens.com/posts/yet-another-redesign/cover.png">
+    <meta property="og:image" content="https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png">
     <meta property="og:image:alt" content="Logo of AssistantNMS">
     <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
     <meta property="og:site_name" content="Inside My Mind">
@@ -126,7 +126,7 @@
         <div class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item">
-                    Inside My Mind — Why I often redesign my websites and apps
+                    Inside My Mind — Azure DevOps agent on Ubuntu 22.04 LTS
                 </div>
             </div>
         </div>
@@ -137,18 +137,40 @@
     </nav>
     <div class="post-wrapper inner">
         <b class="meta">
-            <span class="upper-case">12 September 2022
-                &nbsp;&nbsp;/&nbsp;&nbsp;Software
+            <span class="upper-case">12 October 2022
+                &nbsp;&nbsp;/&nbsp;&nbsp;QuickFix
             </span>
         </b>
-        <h1>Why I often redesign my websites and apps</h1>
+        <h1>Azure DevOps agent on Ubuntu 22.04 LTS</h1>
 
         <div class="content">
-            <div class="cover" style="background-image: url(/posts/yet-another-redesign/cover.png)"></div>
+            <div class="cover" style="background-image: url(/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png)"></div>
             <div class="markdown-content">
-                <h3>Why redesign?</h3>
-<h2>Conclusion</h2>
-<p><br /><br /><br /></p>
+                <p>I recently tried setting up an Azure DevOps agent on my Ubuntu 22.04 Digital Ocean droplet and got stuck with an error message of <code>No usable version of libssl was found</code>. This is a problem with the Azure DevOps agent, but I did find a workaround and I thought I would share it.</p>
+<h3>Workaround</h3>
+<p>Download <code>libssl1</code> from security.ubuntu.com</p>
+<pre><code class="hljs language-bash">wget 'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1665583224062-92759">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="wget 'http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1665583224062-92759" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
+<p>Install the package</p>
+<pre><code class="hljs language-bash">sudo dpkg -i 'libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1665583224062-69808">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="sudo dpkg -i 'libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1665583224062-69808" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
+<p>Delete the package file</p>
+<pre><code class="hljs language-bash">rm 'libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1665583224062-66207">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="rm 'libssl1.1_1.1.1f-1ubuntu2_amd64.deb'
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1665583224062-66207" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
+<p>Then run:</p>
+<pre><code class="hljs language-bash">sed -i 's/openssl_conf = openssl_init/#openssl_conf = openssl_init/g' /etc/ssl/openssl.cnf
+</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1665583224062-41962">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="sed -i 's/openssl_conf = openssl_init/#openssl_conf = openssl_init/g' /etc/ssl/openssl.cnf
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1665583224062-41962" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
+<br />
+<p><em>If the above is not working for you, you may need to replace <code>libssl1.1_1.1.1f-1ubuntu2_amd64.deb</code> with a different <code>.deb</code> package which you can find <a href="http://security.ubuntu.com/ubuntu/pool/main/o/openssl/">here</a> and search for <code>libssl1.</code></em></p>
+<h3>What is the actual issue?</h3>
+<p>It appears that the Azure agent installer makes use of <code>libssl1</code> to communicate with Azure DevOps however the installer does not come with <code>libssl1</code> and Ubuntu 22.04 comes with <code>libssl3</code>. So until the Azure DevOps agent installer is either updated to make use of the later version or comes with a pre-packaged <code>libssl</code>, this workaround will be required.</p>
+<h3>Links</h3>
+<p><a href="https://github.com/microsoft/azure-pipelines-agent/issues/3834">The issue is tracked and can be found here</a> <br>
+<a href="https://studyraft.com/azure-devops-agent-no-usable-version-of-libssl-was-found/">Studyraft blog post about this issue</a></p>
 
             </div>
         </div>
@@ -186,8 +208,8 @@
 
 <script>
     var disqus_config = function () {
-        this.page.url = "https://blog.kurtlourens.com/posts/yet-another-redesign";
-        this.page.identifier = "yet-another-redesign";
+        this.page.url = "https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts";
+        this.page.identifier = "quickfix-azdo-agent-on-ubuntu-22-lts";
     };
 
     (function () {
