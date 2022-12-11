@@ -21,6 +21,9 @@
 
         &:hover {
             transform: scale(105%);
+            .post-card-image-link {
+                transform: scale(101%);
+            }
         }
 
         .post-card-image-link {
