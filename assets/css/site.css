@@ -243,6 +243,9 @@ body.is-loading {
 .post-feed .post-card:hover {
   transform: scale(105%);
 }
+.post-feed .post-card:hover .post-card-image-link {
+  transform: scale(101%);
+}
 .post-feed .post-card .post-card-image-link {
   flex: 2;
   margin-right: 1em;

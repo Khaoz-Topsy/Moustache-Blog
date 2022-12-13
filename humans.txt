@@ -5,7 +5,7 @@ Twitter: @KhaozTopsy
 From: 
 
 /* SITE */
-Last update: 2022-10-12
+Last update: 2022-12-13
 Language: English
 Doctype:HTML5
 IDE: Visual Studio Code
