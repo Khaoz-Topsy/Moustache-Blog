@@ -1,0 +1,29 @@
+{
+    "draft": true,
+    "url": "mastodon-migration",
+    "title": "Migration to Mastodon",
+    "excerpt": "How I joined thousands of developers, jumped the Twitter ship and headed for the great plains of Mastodon!",
+    "imageUrl": "cover.png",
+    "publishDate": "2023-02-06",
+    "isFeatured": false,
+    "tags": [
+        "Mastodon",
+        "Twitter",
+        "NoMansSkySocial"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}

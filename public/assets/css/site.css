@@ -350,6 +350,9 @@ body.is-loading {
 .post-wrapper .content > .markdown-content {
   padding: 2em 3em 5em 3em;
 }
+.post-wrapper .content img {
+  border-radius: 10px;
+}
 
 .post-go-back {
   position: absolute;
