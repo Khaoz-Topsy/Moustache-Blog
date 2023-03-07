@@ -47,24 +47,25 @@ async function buildPosts() {
         const postUrlPath = `${projectData.baseUrl}posts/${metaJsonObj.url}/`;
         const fullImageUrl = `${postUrlPath}${metaJsonObj.imageUrl}`;
 
-        const localProjectData = {
+        const template = await readFile(fullFileName, 'utf8');
+        const templateFunc = Handlebars.compile(template);
+        const templateFullData = {
             ...projectData,
+            baseUrl: postUrlPath,
+            documentTitle: metaJsonObj.title,
+            meta: {
+                ...projectData.meta,
+                // title: `${metaJsonObj.title} - ${projectData.meta.title}`,
+                description: metaJsonObj.excerpt
+            },
             twitterCard: {
                 ...projectData.twitterCard,
                 imageUrl: customUtil.fallbackValues(metaJsonObj.twitter.imageUrl, fullImageUrl),
-
             },
             facebookCard: {
                 ...projectData.facebookCard,
                 imageUrl: customUtil.fallbackValues(metaJsonObj.facebook.imageUrl, fullImageUrl),
-            }
-        };
-
-        const template = await readFile(fullFileName, 'utf8');
-        const templateFunc = Handlebars.compile(template);
-        const templateFullData = {
-            ...localProjectData,
-            documentTitle: metaJsonObj.title,
+            },
             post: {
                 ...metaJsonObj,
                 dateFormatted: customUtil.postDateFormat(metaJsonObj.publishDate),
