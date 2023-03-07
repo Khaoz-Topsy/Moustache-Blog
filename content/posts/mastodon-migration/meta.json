@@ -1,10 +1,9 @@
 {
-    "draft": true,
     "url": "mastodon-migration",
     "title": "Migration to Mastodon",
-    "excerpt": "How I joined thousands of developers, jumped the Twitter ship and headed for the great plains of Mastodon!",
+    "excerpt": "How I joined thousands of developers, jumped the Twitter ship and headed for the great plains of Mastodon! The migration to Mastodon as been awesome!",
     "imageUrl": "cover.png",
-    "publishDate": "2023-02-06",
+    "publishDate": "2023-03-06",
     "isFeatured": false,
     "tags": [
         "Mastodon",
