@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="Inside My Mind - Kurt Lourens">
-    <title>Creating an App for No Man&#x27;s Sky - Inside My Mind</title>
+    <title>Migration to Mastodon - Inside My Mind</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -48,14 +48,14 @@
     <meta name="twitter:url" content="https://blog.kurtlourens.com/">
     <meta name="twitter:title" content="Inside My Mind - Kurt Lourens">
     <meta name="twitter:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
-    <meta name="twitter:image" content="https://blog.kurtlourens.com/posts/side-project-management/cover.jpg">
+    <meta name="twitter:image" content="https://blog.kurtlourens.com/posts/mastodon-migration/cover.png">
     <meta name="twitter:image:alt" content="Logo of AssistantNMS">
 
     <!-- Facebook -->
     <meta property="og:url" content="https://blog.kurtlourens.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Inside My Mind">
-    <meta property="og:image" content="https://blog.kurtlourens.com/posts/side-project-management/cover.jpg">
+    <meta property="og:image" content="https://blog.kurtlourens.com/posts/mastodon-migration/cover.png">
     <meta property="og:image:alt" content="Logo of AssistantNMS">
     <meta property="og:description" content="This is where I write about my Dev experiences, and anything else I think is worth reading 😁">
     <meta property="og:site_name" content="Inside My Mind">
@@ -126,7 +126,7 @@
         <div class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item">
-                    Inside My Mind — Creating an App for No Man&#x27;s Sky
+                    Inside My Mind — Migration to Mastodon
                 </div>
             </div>
         </div>
@@ -137,36 +137,65 @@
     </nav>
     <div class="post-wrapper inner">
         <b class="meta">
-            <span class="upper-case">20 May 2019
-                &nbsp;&nbsp;/&nbsp;&nbsp;Getting Started
+            <span class="upper-case">6 March 2023
+                &nbsp;&nbsp;/&nbsp;&nbsp;Mastodon
             </span>
         </b>
-        <h1>Creating an App for No Man&#x27;s Sky</h1>
+        <h1>Migration to Mastodon</h1>
 
         <div class="content">
-            <div class="cover" style="background-image: url(/posts/side-project-management/cover.jpg)"></div>
+            <div class="cover" style="background-image: url(/posts/mastodon-migration/cover.png)"></div>
             <div class="markdown-content">
-                <p>I am probably the least qualified to write anything on how to manage Side Projects.</p>
-<p>I have (like many Software Engineers) too many side projects. I think it is due to the intoxicating ☠ feeling of starting a project that has a lot of potential.</p>
-<p><img src="GotAnyMoreSideProjects.jpg" alt="Y'all got any more of them Side Projects"></p>
-<p>There have been many weekends where I would curse myself for having started side projects and not finished them, leaving me with 5 or more projects running simultaneously while trying to hold down a full time job.
-So instead of me trying to give advice on how to manage side projects, I am writing this blog post to start a discussion (maybe) but also force myself to do a little research on what the internet says and then present those ideas as my own in this article... Just kidding 🃏, let's just discover some solutions to:</p>
-<p>SideProject-ophilia ™</p>
-<h2>Simplest solution</h2>
-<p>Stop.</p>
-<p><img src="StopIt.gif" alt="stopit"></p>
-<p>This didn't need any research, it's pretty much common sense. If something that you are doing is making you sad, then stop doing it 🤷‍♂️.</p>
-<h2>MVP</h2>
-<p><a href="https://medium.com/side-project-lovers-unite/the-definitive-guide-to-not-going-insane-about-your-side-projects-7b6d13bcbf07">Read more here</a></p>
-<p><img src="ShipIt.gif" alt="ship it"></p>
-<p>I think Hendrik Ewerlin has a really good point here, release your side project! Once it is publicly accessible, you are tied to it. It becomes harder to flip flop between projects when you have something in the wild that you need to look after.</p>
-<p>Another advantage is exposure to releasing applications. A lot of the time the release of an application is a painful process. This ties in with my next point.</p>
-<h2>Finish</h2>
-<p><a href="https://alyjuma.com/side-project-essentials/">Read more</a></p>
-<p><img src="MustFinishSideProject.jpg" alt="finish it"></p>
-<p>You can get really comfortable in a dev environment. The project is born/started on your local machine and lives there until it is released to the public. This helps us focus on our application and it's business rules and logic. But sooner or later we will have to deal with things that a released app needs like domain names, CORS, HTTPS certificates, routing, load balancing, SEO, CDN, Service Workers and so on. As &quot;full stack developers&quot; we need all of those skills.</p>
-<h2>Closing Summary</h2>
-<p>I think we should appreciate that Software is our hobby, even if it can drive us crazy. In the long run it is more likely that it will bring us success rather than sitting in front of the TV📺 or Laptop💻 binging another series. The success from a side projects can be in the form of career progression, the start of a business or even just learning from an experience.</p>
+                <p>I recently started a Mastodon instance with friends for the No Man's Sky community, mostly due to changes happening on Twitter. You can find our instance here: <a href="https://nomanssky.social">NoMansSky.Social</a>. It has been a lot of fun setting up and customising the instance!</p>
+<h3>The event</h3>
+<p>I had only created a simple Twitter bot before the big Twitter API scandal, all the bot would do is create a tweet when there are certain events.</p>
+<br />
+<p><img src="twitterPost.png" alt="tweet about no free API access on Twitter"></p>
+<br />
+<p>This was quite a disappointing development, it meant that my Twitter bot would no longer be able to work and if I wanted to get it working again, I would need to pay. I was not going to pay for the simple posting of automated content...</p>
+<br />
+<blockquote>
+<p>Twitter did change their minds on this, creating Tweets will remain free but reading data from Twitter requires a paid account. Well this is better and would work for me, I am unhappy with how quickly the Twitter overlords can take away features, I would much rather give money to an organisation that creates open source software 🤷</p>
+</blockquote>
+<p>My friends and I had been talking about starting up a Mastodon instance for quite a while, figuring out how much it would cost, if we could moderate it effectively and so on.</p>
+<h3>Initial thoughts 💭</h3>
+<p>Getting used to any new tool can be frustrating and there was a bit of a learning curve as a Twitter user coming to Mastodon. Mastodon is very similar to Twitter in a lot of ways and in most scenarios it builds on top of things that Twitter does well. One of the first features that I think most people will appreciate coming from Twitter is being able to edit a Toot (Mastodon version of a Tweet). Did you make a spelling mistake in your Toot? No problem correct it easily!</p>
+<br />
+<p>You also get quite a few customisation options right from the start, but as an admin of an instance, you get a huge amount of extra customisation capabilities!</p>
+<h3>Customisation 🧑‍🎨</h3>
+<p>You also get quite a few customisation options right from the start, but as an admin of an instance, you get a huge amount of extra customisation capabilities! The first thing I started customising was the emojis!</p>
+<br />
+<p><img src="assistantNMSProfile.png" alt="assistantNMS profile"></p>
+<br />
+<p>This reminds me a bit of the way you could customise a MySpace profile and I have admittedly gone a bit crazy with all the customisations of our Mastodon instance. Some of the things I have customised:</p>
+<ul>
+<li>Toot character count limit
+<ul>
+<li>This has been set to 1616 as a reference to the number that is repeated by the Atlas in No Man's Sky</li>
+</ul>
+</li>
+<li>Favicon
+<ul>
+<li>We went with something more No Man's Sky themed</li>
+</ul>
+</li>
+<li>Custom font
+<ul>
+<li>I had a hand in working on a community NMS-themed font and this was a great project to use the <a href="https://font.nmscd.com">NMS community font</a></li>
+</ul>
+</li>
+<li>CSS tweaks
+<ul>
+<li>This is the easiest customisation as the Mastodon instance has a field where you can place custom CSS</li>
+<li>Through this, I added a custom animated background, better dark mode on certain elements, fun elements like a spaceship flying below the compose toot box and a few more</li>
+</ul>
+</li>
+</ul>
+<h3>Bots 🤖</h3>
+<p>I have found the creation of Mastodon bots a lot simpler than Twitter bots. This may not be the case for all bots since my bots are quite simple. At the moment we have around 4 bots, some respond to you when mentioned, one creates a Toot when events happen in-game and another generates an image with the details of the current live event information from the game.</p>
+<p><a href="https://nomanssky.social/@quicksilverCompanion/109977482631939055"><img src="qsCompanion.png" alt="qsCompanion"></a></p>
+<h3>Conclusion</h3>
+<p>I am really happy that we jumped into the world of Mastodon, it has been a lot of fun learning how to set up and maintain a Mastodon instance. I would suggest that you try out Mastodon! Feel free to join our instance and create your own No Man's Sky themed bot 😁</p>
 
             </div>
         </div>
@@ -204,8 +233,8 @@ So instead of me trying to give advice on how to manage side projects, I am writ
 
 <script>
     var disqus_config = function () {
-        this.page.url = "https://blog.kurtlourens.com/posts/side-project-management";
-        this.page.identifier = "side-project-management";
+        this.page.url = "https://blog.kurtlourens.com/posts/mastodon-migration";
+        this.page.identifier = "mastodon-migration";
     };
 
     (function () {

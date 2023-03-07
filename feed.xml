@@ -15,6 +15,30 @@
         <atom:link rel="self" type="application/rss+xml" href="https://blog.kurtlourens.com/feed.xml" />
         <language>en</language>
         <item>
+            <title>Migration to Mastodon</title>
+            <icon>
+                <url>https://blog.kurtlourens.com/posts/mastodon-migration/cover.png</url>
+            </icon>
+            <logo>
+                <url>https://blog.kurtlourens.com/posts/mastodon-migration/cover.png</url>
+            </logo>
+            <image>
+                <url>
+                    https://blog.kurtlourens.com/posts/mastodon-migration/cover.png
+                </url>
+                <title>Migration to Mastodon</title>
+                <link>https://blog.kurtlourens.com/posts/mastodon-migration</link>
+            </image>
+            <dc:creator>Kurt Lourens</dc:creator>
+            <pubDate>2023-03-06</pubDate>
+            <link>https://blog.kurtlourens.com/posts/mastodon-migration</link>
+            <guid>https://blog.kurtlourens.com/posts/mastodon-migration</guid>
+            <description>
+                <p>How I joined thousands of developers, jumped the Twitter ship and headed for the great plains of Mastodon! The migration to Mastodon as been awesome!</p>
+                <img src="https://blog.kurtlourens.com/posts/mastodon-migration/cover.png" alt="preview" />
+            </description>
+        </item>
+        <item>
             <title>Azure DevOps agent on Ubuntu 22.04 LTS</title>
             <icon>
                 <url>https://blog.kurtlourens.com/posts/quickfix-azdo-agent-on-ubuntu-22-lts/cover.png</url>
