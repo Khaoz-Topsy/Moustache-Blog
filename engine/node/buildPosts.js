@@ -68,6 +68,7 @@ async function buildPosts() {
             },
             post: {
                 ...metaJsonObj,
+                imageUrl: metaJsonObj.postImageUrl ?? metaJsonObj.imageUrl,
                 dateFormatted: customUtil.postDateFormat(metaJsonObj.publishDate),
             },
         };

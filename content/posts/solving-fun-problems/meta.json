@@ -1,0 +1,28 @@
+{
+    "url": "solving-fun-problems",
+    "title": "Why you should solve little problems",
+    "excerpt": "I love creating many small projects that I can use as opportunities to learn! I hope that I can convince you dear reader, lets get stuff built!",
+    "imageUrl": "cover.png",
+    "postImageUrl": "postCover.png",
+    "publishDate": "2024-03-02",
+    "isFeatured": false,
+    "tags": [
+        "Opinion",
+        "Fun"
+    ],
+    "author": "Kurt Lourens",
+    "meta": {
+        "title": null,
+        "description": null
+    },
+    "twitter": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    },
+    "facebook": {
+        "title": null,
+        "description": null,
+        "imageUrl": null
+    }
+}
