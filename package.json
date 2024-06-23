@@ -1,6 +1,6 @@
 {
   "name": "kurt-lourens-blog-templ",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "scripts": {
     "build": "npm-run-all --sequential data:* sass:* template:*",
     "dev": "concurrently \"npm:dev:*\"",
