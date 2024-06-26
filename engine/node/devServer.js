@@ -1,4 +1,4 @@
-var liveServer = require("live-server");
+var liveServer = require("alive-server");
 
 var params = {
     port: 8181, // Set the server port. Defaults to 8080.
@@ -10,6 +10,11 @@ var params = {
     wait: 1000, // Waits for all changes, before reloading. Defaults to 0 sec.
     mount: [['/components', './node_modules']], // Mount a directory to a route.
     logLevel: 2, // 0 = errors only, 1 = some, 2 = lots
-    middleware: [function (req, res, next) { next(); }] // Takes an array of Connect-compatible middleware that are injected into the server middleware stack
+    middleware: [function (req, res, next) {
+        if (req.url.includes('/serviceWorker.js')) {
+            res.statusCode = 404;
+        }
+        next();
+    }] // Takes an array of Connect-compatible middleware that are injected into the server middleware stack
 };
 liveServer.start(params);
