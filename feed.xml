@@ -15,6 +15,30 @@
         <atom:link rel="self" type="application/rss+xml" href="https://blog.kurtlourens.com/feed.xml" />
         <language>en</language>
         <item>
+            <title>Why you should solve little problems</title>
+            <icon>
+                <url>https://blog.kurtlourens.com/posts/solving-fun-problems/cover.png</url>
+            </icon>
+            <logo>
+                <url>https://blog.kurtlourens.com/posts/solving-fun-problems/cover.png</url>
+            </logo>
+            <image>
+                <url>
+                    https://blog.kurtlourens.com/posts/solving-fun-problems/cover.png
+                </url>
+                <title>Why you should solve little problems</title>
+                <link>https://blog.kurtlourens.com/posts/solving-fun-problems</link>
+            </image>
+            <dc:creator>Kurt Lourens</dc:creator>
+            <pubDate>2024-03-02</pubDate>
+            <link>https://blog.kurtlourens.com/posts/solving-fun-problems</link>
+            <guid>https://blog.kurtlourens.com/posts/solving-fun-problems</guid>
+            <description>
+                <p>I love creating many small projects that I can use as opportunities to learn! I hope that I can convince you dear reader, lets get stuff built!</p>
+                <img src="https://blog.kurtlourens.com/posts/solving-fun-problems/cover.png" alt="preview" />
+            </description>
+        </item>
+        <item>
             <title>Migration to Mastodon</title>
             <icon>
                 <url>https://blog.kurtlourens.com/posts/mastodon-migration/cover.png</url>
