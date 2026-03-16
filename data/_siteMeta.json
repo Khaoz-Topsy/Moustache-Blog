@@ -39,8 +39,12 @@
                 "url": "https://assistantapps.com"
             },
             {
-                "name": "Twitter",
-                "url": "https://twitter.com/AssistantNMS"
+                "name": "Playground",
+                "url": "https://playground.kurtlourens.com"
+            },
+            {
+                "name": "",
+                "url": ""
             }
         ]
     },
